@@ -1,0 +1,198 @@
+:root {
+  --main-bg-color: ; /*no se cual creen xd*/
+  --rosa: #f06277;
+  --rojo: #ed3237;
+  --gris: #4b4b4d;
+  --cafe: #663333;
+  --amarillo: #ffcc29;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html * {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+header nav img {
+  width: 20%;
+  height: auto;
+}
+.card {
+  width: 18rem;
+}
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-top: solid 1px var(--gris);
+  margin-top: 15px;
+  background-color: var(--amarillo);
+  padding-top: 15px;
+}
+
+footer div img {
+  width: 60%;
+  margin-left: 15px;
+}
+
+.logo-footer,
+.enlaces-1,
+.enlaces-2,
+.email-dudas {
+  width: 25%;
+  align-self: center;
+}
+
+footer div ul li {
+  list-style: none;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.email-dudas {
+  text-align: center;
+}
+
+#subscribe {
+  margin-right: 10px;
+}
+
+.fotos-productos,
+.card-body {
+  height: 16em;
+}
+.vermas {
+  position: absolute;
+  bottom: 1;
+  left: 1;
+}
+
+.copyright-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  border-top: solid 1px var(--gris);
+  background-color: var(--cafe);
+}
+
+#btnSend {
+  border: 2px solid var(--rosa);
+  background-color: white;
+  color: var(--rosa);
+  padding: 5px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  width: 50%;
+}
+
+#btnSend:hover {
+  background-color: var(--rosa);
+  color: white;
+}
+
+.derechosAutor {
+  width: 70%;
+  align-self: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.redesSociales {
+  align-self: center;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav-principal {
+  background-color: var(--amarillo);
+}
+
+#nav-principal ul li {
+  list-style: none;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.fa-twitter,
+.fa-instagram,
+.fa-facebook,
+.fa-envelope {
+  padding: 10px;
+  color: var(--rosa);
+}
+
+#email-box {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 2px solid var(--rosa);
+  background-color: white;
+  color: var(--rosa);
+}
+
+#nav-principal ul li a:hover,
+#nav-principal ul li a:visited,
+#nav-principal ul li a:link,
+#nav-principal ul li a:active {
+  color: black;
+  text-decoration: none;
+}
+
+#nav-principal {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+#nav-principal li .fas {
+  color: black;
+  margin-left: 4px;
+}
+
+#nav-principal .logo {
+  width: 20%;
+  height: 20%;
+}
+
+/*#nav-principal .busqueda {
+  width: 30%;
+}*/
+
+#nav-principal #barra-central-nav {
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav-principal #barra-derecha-nav {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.burger-menu {
+  background-color: var(--cafe);
+  border-radius: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2.3em;
+  margin-top: 0.5em;
+}
+
+.burger-menu > i {
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px;
+}
