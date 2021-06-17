@@ -28,7 +28,7 @@ header nav img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  border-top: solid 1px var(--gris);
+  border-top: solid 1px var(--amarillo);
   margin-top: 15px;
   background-color: var(--amarillo);
   padding-top: 15px;
@@ -83,10 +83,10 @@ footer div ul li {
   border: 2px solid var(--rosa);
   background-color: white;
   color: var(--rosa);
-  padding: 5px 10px;
+  padding: 5px 0px;
   font-size: 11px;
   cursor: pointer;
-  width: 50%;
+  width: 70%;
 }
 
 #btnSend:hover {
@@ -99,8 +99,7 @@ footer div ul li {
   align-self: center;
   margin-top: 15px;
   margin-left: 15px;
-  font-style: oblique;
-  font-weight: bold;
+  color: white;
 }
 
 .redesSociales {
@@ -108,6 +107,8 @@ footer div ul li {
   width: 30%;
   display: flex;
   justify-content: space-around;
+  color: white;
+  font-weight: bold;
 }
 
 #nav-principal {
@@ -120,12 +121,18 @@ footer div ul li {
   margin-left: 12px;
 }
 
+/*CAMBIAR EL COLOR E ICONOS*/
 .fa-twitter,
 .fa-instagram,
 .fa-facebook,
-.fa-envelope {
+.fa-envelope{
   padding: 10px;
-  color: var(--rosa);
+  color: white;
+  align-self: center;
+}
+
+#redes {
+  display: none;
 }
 
 #email-box {
