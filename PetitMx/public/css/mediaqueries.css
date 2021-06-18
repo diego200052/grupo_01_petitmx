@@ -1,7 +1,12 @@
-/*MEDIA QUERIES*/
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  /*Modificamos el texto del navegador*/
+/*MEDIA QUERIES*/ 
+
+/* Teléfonos & larger smartphones (481 - 768) */
+@media only screen and (max-width: 768px) {   
+  
+  #img-footer{
+    width: 40%;
+  }
+
   #nav-principal #barra-central-nav .menu {
     display: none;
   }
@@ -19,13 +24,26 @@
   #nav-principal {
     flex-direction: column;
   }
+
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  /*Modificamos el texto del navegador*/
+
+
+/* Medium devices (landscape tablets, laptops, 769px - 1279px) */
+@media only screen and (min-width: 769px) {
   .burger-menu {
     display: none;
   }
+
+  .logo-footer{
+    text-align: center;
+    width: 25%;
+  }
+
+  #img-footer{
+    width: 30%;
+    margin: 0%;
+  }
+ 
   #nav-principal {
     justify-content: center;
   }
@@ -34,20 +52,20 @@
   }
   #nav-principal .menu {
     margin-top: 15px;
+  }  
+}
+
+/* large devices (larger desktops, 1280+) */
+@media only screen and (min-width: 1000px) {
+
+  .logo-footer{
+    text-align: center;
+    width: 25%;
   }
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  /*Modificamos el texto del
-  navegador*/
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  /*Modificamos el texto del
-  navegador*/
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  /*Modificamos el texto del
-  navegador*/
-}
+
+  #img-footer{
+    width: 20%;
+    margin: 0%;
+  }
+  
+} 
