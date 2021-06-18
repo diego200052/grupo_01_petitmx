@@ -124,8 +124,7 @@ footer div ul li {
 /*CAMBIAR EL COLOR E ICONOS*/
 .fa-twitter,
 .fa-instagram,
-.fa-facebook,
-.fa-envelope{
+.fa-facebook{
   padding: 10px;
   color: white;
   align-self: center;
@@ -202,4 +201,106 @@ footer div ul li {
   color: white;
   font-size: 1.2em;
   padding: 10px;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+  flex-direction: column;
+}
+
+.sign-up-form{
+  padding: 50px 50px 0px 50px;
+}
+
+
+.title {
+  font-size: 2.2rem;
+  color: var(--gris);
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 7px;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: var(--gris);
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.btn-reg-ini {
+  width: 150px;
+  background-color: var(--cafe);
+  border: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-reg-ini:hover {
+  background-color: #704a47;
+}
+
+hr{
+  height: 1px;
+  background-color: var(--rosa);
+  border: none;
+}
+
+.terminos-promos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#promocion,
+#terminos{
+  width: 20%;
+  align-self: center;
+}
+
+#etiqueta-promocion,
+#etiqueta-terminos{
+  width: 80%;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.ingresar{
+  align-self: center;
+  text-align: center;
+}
+
+.registrar{
+  text-align: center;
 }
