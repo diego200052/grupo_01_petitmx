@@ -117,8 +117,6 @@ footer div ul li {
 
 #nav-principal ul li {
   list-style: none;
-  margin-right: 12px;
-  margin-left: 12px;
 }
 
 /*CAMBIAR EL COLOR E ICONOS*/
@@ -142,14 +140,6 @@ footer div ul li {
   color: var(--rosa);
 }
 
-#nav-principal ul li a:hover,
-#nav-principal ul li a:visited,
-#nav-principal ul li a:link,
-#nav-principal ul li a:active {
-  color: black;
-  text-decoration: none;
-}
-
 #nav-principal {
   justify-content: space-between;
   align-items: center;
@@ -161,14 +151,27 @@ footer div ul li {
   margin-left: 4px;
 }
 
-#nav-principal .logo {
-  width: 20%;
-  height: 20%;
+#nav-principal .logo-navbar {
+  width: 17%;
+  height: 17%; 
+  max-width: 17%;
+  max-height: 17%;
 }
 
-/*#nav-principal .busqueda {
-  width: 30%;
-}*/
+.logo-navbar {
+  content: url("/img/versionLimpia.png");
+}
+
+#nav-principal .busqueda input {
+  width: 350px;
+  border-radius: 7px;
+  border: none;
+  padding: 3px;
+}
+
+#nav-principal .busqueda {
+  margin-bottom: 5px;
+}
 
 #nav-principal #barra-central-nav {
   flex-direction: column;
@@ -497,4 +500,127 @@ button[class*=btn] {
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+/* Menu */
+#menu {
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.15);
+  background: var(--cafe);
+  border-radius: 7px;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+#menu > li {
+  position: relative;
+  box-shadow: 1px 0 0 rgba(255,255,255,.25);  
+}
+
+#menu a {
+  display: block;
+  padding: 10px 16px;
+  line-height: 1;
+}
+
+#menu > li:hover > a {
+  background: var(--rosa);
+  color: white;
+  text-shadow: none;
+}
+
+.boton-inicial {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.boton-final {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+#menu li ul  {
+  position: absolute;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 7px;
+  background: transparent;
+  overflow: hidden;
+  transform-origin: 50% 0%;
+}
+
+
+#menu li:hover ul {
+  padding: 15px 0;
+  background: var(--cafe);
+  opacity: 1;
+  visibility: visible;
+  box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+  animation-name: swingdown;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+
+}
+
+@keyframes swingdown {
+  0% {
+    opacity: .99999;
+    transform: rotateX(90deg);
+  }
+
+  30% {			
+    transform: rotateX(-20deg) rotateY(5deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  65% {
+    transform: rotateX(20deg) rotateY(-3deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: rotateX(0);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+#nav-principal .submenu li a {
+  padding-left: 15px;
+  text-shadow: none;
+  border-top: dotted 1px transparent;
+  border-bottom: dotted 1px transparent;
+  transition: all .15s linear;
+}
+
+#nav-principal ul > li > a:hover,
+#nav-principal ul > li > a:visited,
+#nav-principal ul > li > a:link,
+#nav-principal ul > li > a:active {
+  color: white;
+  text-decoration: none;
+}
+
+#nav-principal .submenu > li > a:hover {
+  color: white;
+  border-top: dotted 1px rgba(255,255,255,.15);
+  border-bottom: dotted 1px rgba(255,255,255,.15);
+  background: var(--rosa);
+}
+
+.boton-navbar-registrate {
+  margin-right: 10px;
+}
+
+.boton-navbar-fav {
+  font-size: 2.2rem;
+  margin-right: 15px;
+}
+
+.botones-navbar-favshopbag {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.precio-navbar {
+  font-size: 1.2rem;
 }

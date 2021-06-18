@@ -25,6 +25,18 @@
     flex-direction: column;
   }
 
+  #nav-principal .busqueda input {
+    width: 250px;
+  }
+
+  #nav-principal .logo-navbar {
+    margin-bottom: 20px;
+    width: 30%;
+    height: 30%; 
+    max-width: 30%;
+    max-height: 30%;
+  }
+
 }
 
 
@@ -45,7 +57,7 @@
   }
  
   #nav-principal {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   #nav-principal .logo {
     margin-bottom: 15px;
@@ -84,6 +96,17 @@
     margin: 1rem;
     justify-content: space-around;
   }
+
+  .logo-navbar {
+    content: url("/img/versionHorizontal.png");
+  }
+
+  #nav-principal .logo-navbar {
+    width: 19%;
+    height: 19%; 
+    max-width: 19%;
+    max-height: 19%;
+  }
 }
 
 /* large devices (larger desktops, 1280+) */
@@ -97,6 +120,25 @@
   #img-footer{
     width: 20%;
     margin: 0%;
+  }  
+
+  #nav-principal {
+    justify-content: space-around;
+  }
+
+  .botones-navbar-favshopbag {
+    margin-top: 20px;
+  }
+
+  .boton-navbar-fav {
+    font-size: 2.5rem;
+  }
+
+  #nav-principal .logo-navbar {
+    width: 15%;
+    height: 15%; 
+    max-width: 15%;
+    max-height: 15%;
   }
   
 } 
