@@ -20,27 +20,28 @@
     <header>
       <nav class="flex-container" id="nav-principal">
         
-        <img class="logo" src="./img/versionLimpia.png"></img>
+        <img class="logo-navbar"></img>
         <div class="flex-container" id="barra-central-nav">
 
-          <div class="busqueda">
+          <form class="busqueda" method="GET" action="/">
             <input type="text" placeholder="Buscar productos">
             <i class="fas fa-search"></i>
-          </div>
+          </form>
 
           <div class="menu">
-            <ul class="flex-container">
-              <li><a href="#">Home</a></li>
+            <ul id="menu" class="flex-container">
+              <li><a class="boton-inicial" href="#">Home</a></li>
               <li><a href="#">Nosotros</a></li>
-              <li><a href="#">Animales</a></li>
-              <ul>
-                <li><a href="#">Perros</a></li>
-                <li><a href="#">Gatos</a></li>
-                <li><a href="#">Peces</a></li>
-              </ul>
+              <li><a href="#">Animales</a>
+                <ul class="submenu">
+                  <li><a href="#">Perros</a></li>
+                  <li><a href="#">Gatos</a></li>
+                  <li><a href="#">Peces</a></li>
+                </ul>
+              </li>
               <li><a href="#">Productos</a></li>
               <li><a href="#">Blog</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a class="boton-final" href="#">Contacto</a></li>
             </ul>
           </div>
 
@@ -52,15 +53,15 @@
 
         <div class="flex-container" id="barra-derecha-nav">
           
-          <div>
-            <span>Registrate</span><i class="fas fa-user-plus"></i>
-            <span>Login</span><i class="fas fa-sign-in-alt"></i>
+          <div class="botones-navbar-registrologin">
+            <span class="boton-navbar-registrate">Registrate <i class="fas fa-user-plus"></i></span>
+            <span class="boton-navbar-login">Login <i class="fas fa-sign-in-alt"></i></span>
           </div>
 
-          <div>
-              <i class="fab fa-gratipay"></i>
-              <span>$0.00</span>
-              <i class="fas fa-shopping-bag"></i>
+          <div class="botones-navbar-favshopbag">
+              <i class="fab fa-gratipay boton-navbar-fav"></i>
+              <span class="precio-navbar">$0.00</span>
+              <i class="fas fa-shopping-bag boton-navbar-shopbag"></i>
           </div>
 
         </div>
