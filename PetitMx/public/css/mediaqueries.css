@@ -45,14 +45,45 @@
   }
  
   #nav-principal {
-    justify-content: center;
+    justify-content: space-between;
   }
   #nav-principal .logo {
     margin-bottom: 15px;
   }
   #nav-principal .menu {
     margin-top: 15px;
-  }  
+  }
+
+  /* productDetail.html */
+  .imagen-producto {
+    width: 50%;
+  }
+  
+  .tproducto {
+    width: 50%;
+    padding-top: 3rem;
+  }
+
+  .caracteristicas-tproducto {
+    width: 50%;
+  }
+  
+  .promo-tproducto .fas {
+    width: 50%;
+  }
+  
+  .promo-tproducto {
+    width: 50%;
+  }
+
+  .tarjeta-inferior-producto {
+    padding: 3rem;
+  }
+
+  .tarjeta-superior-producto {
+    margin: 1rem;
+    justify-content: space-around;
+  }
 }
 
 /* large devices (larger desktops, 1280+) */
