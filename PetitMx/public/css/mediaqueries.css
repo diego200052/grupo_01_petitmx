@@ -37,6 +37,14 @@
     max-height: 30%;
   }
 
+  #inicioSesion {
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #imagenInicioS {
+      display: none;
+  }
 }
 
 

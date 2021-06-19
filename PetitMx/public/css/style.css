@@ -1,5 +1,4 @@
 :root {
-  --main-bg-color: ; /*no se cual creen xd*/
   --rosa: #f06277;
   --rojo: #ed3237;
   --gris: #4b4b4d;
@@ -270,7 +269,7 @@ footer div ul li {
   transition: 0.5s;
 }
 
-.btn-reg-ini:hover {
+.btn-reg-ini,.btn_login:hover {
   background-color: #704a47;
 }
 
@@ -287,11 +286,13 @@ hr{
 }
 
 #promocion,
+#rememberme,
 #terminos{
   width: 20%;
   align-self: center;
 }
 
+#etiqueta-rememberme,
 #etiqueta-promocion,
 #etiqueta-terminos{
   width: 80%;
@@ -624,3 +625,39 @@ button[class*=btn] {
 .precio-navbar {
   font-size: 1.2rem;
 }
+#inicioSesion {
+  margin:auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  padding: 5vh;
+}
+#imagenInicioS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#imagenInicioS img {
+  width: 200;
+  height: 200;
+}
+.btn_login{
+  background-color: var(--cafe);
+  height: 2em;
+  border: none;
+  border-radius: 1em;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+#formularioInicioS {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 12%;
+  grid-gap: 20px;
+}
+
+
+

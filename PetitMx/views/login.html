@@ -69,9 +69,34 @@
       </nav>
     </header>
     <main>
-			
-    </main>
+    <div class="container">
+     <div id="inicioSesion">
+            <div id="imagenInicioS">
+                <img src="img/versionLimpia.png" alt="logo" id="imgIniciodeSesion">
+            </div>
 
+            <div id="formularioInicioS">
+                <h1>Iniciar sesión</h1>
+                <hr>
+                <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Usuario" required  minlength="4">
+                </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" name="password" placeholder="Contraseña"  required>
+            </div>
+            <div class="terminos-promos">
+                        <input type="checkbox" id="rememberme" name="rememberme" value="Rememberme">
+                        <label id="etiqueta-rememberme" for="rememberme">Recordar mis datos</label><br><br>
+                    </div>
+                <input type="submit" value="Login"  class="btn_login">
+                <span>¿Olvidaste tu <a href="#">contraseña?</a></span>
+                    <a href="/register">Crea un nuevo usuario ➡ </a>
+            </div>
+        </div>
+        </div>
+        </main>
     <!-- FOOTER -->
 
     <footer class="footer-flex">
