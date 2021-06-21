@@ -641,6 +641,11 @@ button[class*=btn] {
   width: 200;
   height: 200;
 }
+#productos{
+  display:block;
+  margin: auto;
+  width:800px;
+}
 .btn_login{
   background-color: var(--cafe);
   height: 2em;
@@ -659,5 +664,26 @@ button[class*=btn] {
   grid-gap: 20px;
 }
 
+.carousel-item .img-fluid {
+  height: 20%;
+  width: 60%;
 
+}
+.carousel-control-next, .carousel-control-prev{
+  color: var(--cafe)  !important;
+}
 
+#marcas
+{
+  text-align: center;
+}
+.wrapper {
+  overflow:hidden;
+
+}
+.wrapper img {
+  width:10%;
+  height:10%;
+  float:left;
+  margin: 1%;
+}
