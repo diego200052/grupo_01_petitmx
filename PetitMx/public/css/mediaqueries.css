@@ -115,6 +115,18 @@
     max-width: 19%;
     max-height: 19%;
   }
+  #barra-lateral-izquierda {
+    width: 20%;
+  }
+
+  .container-product {
+    flex-wrap: inherit;
+  }
+
+  .productList {
+    margin-right: 20px;
+    width: 200%;
+  }
 }
 
 /* large devices (larger desktops, 1280+) */
@@ -149,4 +161,4 @@
     max-height: 15%;
   }
   
-} 
+}

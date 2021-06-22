@@ -102,12 +102,35 @@
       <section>
 
       </section>
-      <!-- Barra lateral izquierda (Precio, Marca y Filtros) -->
-      <section>
-        
-      </section>
       <!-- Productos con imagen y descripción -->
-      <section>
+      <section id="productos-home" class="flex-container">
+        <!-- Barra lateral izquierda (Precio, Marca y Filtros) -->
+        <div id="barra-lateral-izquierda">
+          <div class="range-slider">
+            <h5>Precio</h5>
+            <input type="range" min="1" max="100" value="50"></input>
+            <div class="flex-container precios">
+              <div class="precio-inicial">$0</div>
+              <div class="precio-final">$0.00</div>
+            </div>
+          </div>
+          <div class="marca">
+            <h5>Marca</h5>
+            <div class="checkbox-marcas">
+              <input type="checkbox" name="marca" value="marca-1">Marca 1</input><br>
+              <input type="checkbox" name="marca" value="marca-2">Marca 2</input><br>
+              <input type="checkbox" name="marca" value="marca-3">Marca 3</input><br>
+              <input type="checkbox" name="marca" value="marca-4">Marca 4</input>
+            </div>
+          </div>
+          <div class="filtros">
+            <h5><i class="fas fa-filter"></i>Filtros</h5>
+            <div><i class="far fa-times-circle"></i>Filtro 1</div>
+            <div><i class="far fa-times-circle"></i>Filtro 2</div>
+            <div><i class="far fa-times-circle"></i>Filtro 3</div>
+            <div><i class="far fa-times-circle"></i>Filtro 4</div>
+          </div>
+        </div>
         <div class="card-deck col d-flex justify-content-center" id="Productos">
           <article>
           <div class="card">

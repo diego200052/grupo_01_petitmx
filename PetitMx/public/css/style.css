@@ -380,6 +380,10 @@ hr{
   font-size: 12px;
 }
 
+.productDetail p {
+  text-align: center;
+}
+
 .productPrice{
   width: 20%;
   align-self: center;
@@ -548,6 +552,7 @@ button[class*=btn] {
   background: transparent;
   overflow: hidden;
   transform-origin: 50% 0%;
+  z-index: 5;
 }
 
 
@@ -686,4 +691,85 @@ button[class*=btn] {
   height:10%;
   float:left;
   margin: 1%;
+}
+
+#barra-lateral-izquierda {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+#barra-lateral-izquierda h5 {
+  text-align: center;
+}
+
+#barra-lateral-izquierda .range-slider input {
+  height: 5px;
+  width: 100%;
+}
+
+#barra-lateral-izquierda .precios {
+  justify-content:space-between;
+}
+
+#barra-lateral-izquierda .checkbox-marcas {
+  border: 1px solid var(--gris);
+  border-radius: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#barra-lateral-izquierda .marca {
+  margin-top: 20px;
+}
+
+#barra-lateral-izquierda .marca input {
+  margin-right: 5px;
+}
+
+#barra-lateral-izquierda .filtros {
+  margin-top: 20px;
+}
+
+#barra-lateral-izquierda .filtros i{
+  margin-right: 5px;
+}
+
+.productTotal {
+  margin-top: 20px;
+}
+
+.productTotal .productTitle {
+  margin-bottom: 0.8rem;
+}
+
+.productTotal .productList p {
+  width: 100%;
+}
+
+.productTotal .flex-container {
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 2.5rem;
+}
+
+.productTotal{
+  border: solid 1px var(--rojo);
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.productTotal .productContent p {
+  width: 100%;
+  text-align: start;
+}
+
+.productList .productTitle {
+  width: 100%;
+  text-align: start;
+  padding: 10px;
 }

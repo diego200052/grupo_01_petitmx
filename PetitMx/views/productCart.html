@@ -70,12 +70,12 @@
     </header>
     <main>
         <div class="container-product">
-            <div clase="productTitle">
-                <i class="fas fa-shopping-cart">
-                    <span>Carrito de Compras</span>
-                </i>
-            </div>
             <div class="productList">
+                <div class="productTitle">
+                  <i class="fas fa-shopping-cart">
+                      <span>Carrito de Compras</span>
+                  </i>
+                </div>
                 <span class="producto textFormat">PRODUCTO</span>
                 <span class="precio textFormat">PRECIO</span>
                 <span class="cantidad textFormat">CANTIDAD</span>
@@ -117,7 +117,35 @@
                 </div>
             </div>
             <div class="productTotal">
-
+                <div class="productTitle">
+                  <i class="fas fa-shopping-basket">
+                      <span>Total del carrito</span>
+                  </i>
+                </div>
+                <div class="subtotal-checkout flex-container">
+                  <span class="textFormat">Subtotal</span>
+                  <span>$484</span>
+                </div>
+                <div class="cupon-checkout flex-container">
+                  <span class="textFormat">Cupón: mascota</span>
+                  <span>-$50</span>
+                </div>
+                <div class="envio-checkout flex-container">
+                  <span class="textFormat">Envío</span>
+                  <span>$150</span>
+                </div>
+                <hr class="separacion">
+                <div class="total-checkout flex-container">
+                  <span class="textFormat">Total</span>
+                  <span>$584</span>
+                </div>
+                <div class="productContent flex-container">
+                    <p>Cupón de descuento</p>
+                    <input type="text"></input>
+                    <button value="aplicar-cupon">Aplicar cupón</button>
+                </div>
+                <br><br>
+                <button value="aplicar-cupon">Finalizar compra</button>
             </div>
         </div>
 			
