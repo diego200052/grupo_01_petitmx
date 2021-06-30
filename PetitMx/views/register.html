@@ -6,159 +6,207 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Fav icon-->
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon128.png">
+    <!--  Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- Fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <title>PetItMx</title>
   </head>
   <body>
     <header>
-      <nav class="flex-container" id="nav-principal">
-        
-        <img class="logo-navbar"></img>
-        <div class="flex-container" id="barra-central-nav">
-
-          <form class="busqueda" method="GET" action="/">
-            <input type="text" placeholder="Buscar productos">
-            <i class="fas fa-search"></i>
-          </form>
-
-          <div class="menu">
-            <ul id="menu" class="flex-container">
-              <li><a class="boton-inicial" href="#">Home</a></li>
-              <li><a href="#">Nosotros</a></li>
-              <li><a href="#">Animales</a>
-                <ul class="submenu">
-                  <li><a href="#">Perros</a></li>
-                  <li><a href="#">Gatos</a></li>
-                  <li><a href="#">Peces</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a class="boton-final" href="#">Contacto</a></li>
-            </ul>
-          </div>
-
-          <div class="burger-menu">
-              <i class="fas fa-bars"></i>
-          </div>
-
+      <!-- Comienza Navbar -->
+    <nav class="nav-extended yellow darken-2">
+      <div class="row">
+        <div class="col s12 m3 l3 center-align logo">
+          <a href="/"><img class="logo-size" src="img/versionLimpia.png" alt=""></a>
         </div>
-
-        <div class="flex-container" id="barra-derecha-nav">
-          
-          <div class="botones-navbar-registrologin">
-            <span class="boton-navbar-registrate">Registrate <i class="fas fa-user-plus"></i></span>
-            <span class="boton-navbar-login">Login <i class="fas fa-sign-in-alt"></i></span>
-          </div>
-
-          <div class="botones-navbar-favshopbag">
-              <i class="fab fa-gratipay boton-navbar-fav"></i>
-              <span class="precio-navbar">$0.00</span>
-              <i class="fas fa-shopping-bag boton-navbar-shopbag"></i>
-          </div>
-
-        </div>
-
-      </nav>
-    </header>
-    <main>
-			<div class="signup">
-				<form class="sign-up-form" action="/home">
-					<h2 class="title">Registro</h2>
-                    <hr>
-					<div class="input-field">
-						<i class="fas fa-user"></i>
-						<input type="text" id="username" name="username" placeholder="Usuario" required  minlength="4" maxlength="8">
-					</div>
-					<div class="input-field">
-						<i class="fas fa-envelope"></i>
-						<input type="email" id="email" name="email" placeholder="Correo" required>
-					</div>
-					<div class="input-field">
-						<i class="fas fa-lock"></i>
-						<input type="password" id="password" name="password" placeholder="Contraseña"  
-                        minlength="8"
-                        pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
-                        title="La contraseña debe comenzar con una letra y contener al menos un dígito"
-                        required>
-					</div>
-                    <div class="input-field">
-						<i class="fas fa-lock"></i>
-                        <input type="password" id="confirm-password" name="confirm-password" 
-                        placeholder="Confirmar contraseña"
-                        minlength="8"
-                        pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
-                        title="La contraseña debe comenzar con una letra y contener al menos un dígito"
-                        required>
-                    </div>
-                    <div class="terminos-promos">
-                        <input type="checkbox" id="promocion" name="promocion" value="Promocion">
-                        <label id="etiqueta-promocion" for="promocion">Deseo recibir información sobre promociones</label><br>
-                        <input type="checkbox" id="terminos" name="terminos" value="Terminos">
-                        <label id="etiqueta-terminos" for="terminos">He leído y acepto la política de privacidad</label><br><br>
-                    </div>
-                    <div class="registrar">
-                        <input type="submit" class="btn-reg-ini"  value="REGISTRAR">
-                    </div>
-                    <hr>
-				</form>
-                <div class="ingresar">
-                    <p>¿Ya tienes cuenta?</p>
-                    <a href="/login"><input type="button" class="btn-reg-ini" value="INICIAR SESIÓN"></a>
+        <div class="col s12 m5 l5 center-align buscador">
+          <div class="search_wrap search_wrap_3">
+            <div class="search_box">
+              <form action="/" method="GET">
+                <input type="text" class="input" placeholder="search...">
+                <div class="btn btn_common">
+                  <i class="fas fa-search"></i>
                 </div>
-			</div>
+              </form>
+            </div>
+          </div>  
+        </div>
+        <div class="col s12 hide-on-med-and-up">
+          <div class="nav-wrapper burger-menu">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="fas fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col m4 l4 hide-on-small-only login-sign-up">
+          <div class="row">
+            <div class="col m6 l6">
+              <a href="/register">
+                <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
+              </a>       
+            </div>
+            <div class="col m6 l6">
+              <a href="/login">
+                <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
+              </a>   
+            </div>
+          </div>
+        </div>             
+      </div>
+    </nav>
+    <!-- Fin del navbar-->
+
+    <!-- Contenido de menú versión mobile -->
+    <ul class="sidenav" id="mobile-demo">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#" data-target='dropdown1' class='dropdown-trigger'>Animales</a>
+      </li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="/register"><i class="material-icons">person_add</i>Registrate</a></li>
+      <li><a href="/login"><i class="material-icons">forward</i>Login</a></li>
+    </ul>
+
+     <!-- Estructura Dropdown para animales -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">Perros</a></li>
+      <li><a href="#!">Gatos</a></li>
+      <li><a href="#!">Peces</a></li>
+      <li><a href="/">Otros</a></li>
+    </ul>
+
+    </header>
+
+    <main class="fondo-main">
+      <div class="container">
+        <div class="row">
+          <form action="/home" method="GET">
+            <h2 class="title center-align brown-text">¡REGISTRATE!</h2>
+            <hr>
+            <div class="card-sign-up hoverable">
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Usuario" required  minlength="4" maxlength="8">
+              </div>
+              <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Correo" required>
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Contraseña"  
+                            minlength="8"
+                            pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
+                            title="La contraseña debe comenzar con una letra y contener al menos un dígito"
+                            required>
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirm-password" name="confirm-password" 
+                       placeholder="Confirmar contraseña"
+                       minlength="8"
+                       pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
+                       title="La contraseña debe comenzar con una letra y contener al menos un dígito"
+                       required>
+              </div>
+              <div >
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"  />
+                    <span>Deseo recibir información sobre promociones</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"  />
+                    <span>He leído y acepto la política de privacidad</span>
+                  </label>
+                </p>
+              </div>
+              <div class="registrar">
+                <input type="submit" class="btn-reg-ini"  value="REGISTRAR">
+              </div>
+            </div>
+          </form>
+          <div class="ingresar">
+              <p class="blue-text">¿Ya tienes cuenta?</p>
+              <a href="/login"><input type="button" class="btn-reg-ini" value="INICIAR SESIÓN"></a>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
-
-    <footer class="footer-flex">
-      <div class="logo-footer">
-        <img id="img-footer" src="./img/versionVertical.png" alt="LogoFooter">
-      </div>
-      <div class="enlaces-1">
-        <p>Apartado 1 </p>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
-      </div>
-      <div class="enlaces-2">
-          <p>Apartado 2 </p>
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul>
-      </div>
-      <div class="email-dudas">
-        <form id="subscribe" action="/" method="POST">
-          <p>¡Suscríbete!</p>
-          <input id="email-box" type="text" placeholder="Correo...">
-          <button id="btnSend" type="submit" value="Enviar">ENVIAR</button>
-        </form>
-          
-      </div>
-      <div class="copyright-text">
-        <div class="derechosAutor">
-            <p>© 2021 Copyright by PetitMx</p>
-        </div>
-          <div class="redesSociales">
-              <p id="redes">SÍGUENOS</p>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"> <i class="fab fa-instagram"></i></a>
-              <a href="#"> <i class="fab fa-facebook"></i></a>
+    <footer class="page-footer yellow darken-2">
+      <div class="container">
+        <div class="row center-align">
+          <div class="col l4 m4 s6">
+            <img id="img-footer" src="./img/versionVertical.png" alt="LogoFooter">
+          </div>
+          <div class="col l2 m4 s6 l-media-menu">
+            <h4 class="text-footer-menu">Menú</h4>
+            <ul>
+              <li><a class="text-footer-menu size" href="#!">Home</a></li>
+              <li><a class="text-footer-menu size" href="#!">Nosotros</a></li>
+              <li><a class="text-footer-menu size" href="#!">Productos</a></li>
+              <li><a class="text-footer-menu size" href="#!">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col l2 hide-on-med-and-down" id="footer-menu-2">
+            <ul>
+              <li><a class="text-footer-menu size" href="#!">Home</a></li>
+              <li><a class="text-footer-menu size" href="#!">Nosotros</a></li>
+              <li><a class="text-footer-menu size" href="#!">Productos</a></li>
+              <li><a class="text-footer-menu size" href="#!">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col l4 m4 s12 center-align l-media-subs">
+            <form id="subscribe" action="/" method="GET">
+              <h4 class="subs">¡Suscríbete!</h4>
+              <input class="suscribe-email" id="email" type="email" class="validate" placeholder="Correo...">
+              <button class="btn send-email waves-effect waves-pink waves-ripple" type="submit" name="action">Enviar
+                <i class="material-icons right">send</i>
+              </button>
+            </form>
           </div>
         </div>
-    </footer>
-    
-  </body>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row redes-copyright">           
+            <div class="col s12 m8 l6 caja-redes center-align">
+              <span id="redes">Síguenos</span>
+              <a class="right-align" href="https://www.facebook.com/" target="_blank"><img class="img-redes" src="img/redes/icons8-facebook-100.png" alt=""></a>
+              <a class="right-align" href="https://twitter.com/" target="_blank"><img class="img-redes" src="img/redes/icons8-twitter-100.png" alt=""></a>
+              <a class="right-align" href="https://www.instagram.com/" target="_blank"><img  class="img-redes"src="img/redes/icons8-instagram-100.png" alt=""></a>
+            </div>
+            <div class="col s12 m4 l6 caja-copyright center-align">
+              <p>© 2021 Copyright by PetItMx</p>
+            </div>
 
+          </div>
+        
+        </div>
+      </div>
+    </footer>
+
+
+    <!--FIN DEL FOOTER -->
+
+  </body>
+  <!-- JavaScript -->
+  <!-- jQuery first, then Popper.js, then Materialize JS -->
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app2.js"></script>
 </html>

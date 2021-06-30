@@ -1,41 +1,7 @@
 /*MEDIA QUERIES*/ 
 
-/* Teléfonos & larger smartphones (481 - 768) */
-@media only screen and (max-width: 768px) {   
-  
-  #img-footer{
-    width: 40%;
-  }
-
-  #nav-principal #barra-central-nav .menu {
-    display: none;
-  }
-  #nav-principal #barra-central-nav .burger-menu {
-    margin-top: 15px;
-  }
-  #nav-principal #barra-derecha-nav {
-    display: none;
-  }
-  #nav-principal .logo {
-    width: 50%;
-    height: 50%;
-    margin-bottom: 15px;
-  }
-  #nav-principal {
-    flex-direction: column;
-  }
-
-  #nav-principal .busqueda input {
-    width: 250px;
-  }
-
-  #nav-principal .logo-navbar {
-    margin-bottom: 20px;
-    width: 30%;
-    height: 30%; 
-    max-width: 30%;
-    max-height: 30%;
-  }
+/* Teléfonos & larger smartphones (481 - 767) */
+@media only screen and (max-width: 767px) {  
 
   #inicioSesion {
     grid-template-columns: 1fr;
@@ -48,32 +14,62 @@
 }
 
 
-/* Medium devices (landscape tablets, laptops, 769px - 1279px) */
-@media only screen and (min-width: 769px) {
-  .burger-menu {
-    display: none;
+/* Medium devices (landscape tablets, laptops, 768px - 1279px) */
+@media only screen and (min-width: 768px) {
+
+  
+  .boton-navbar{
+    margin-right: 10px;
+  }
+  
+  .icon-padding{
+    padding-left: 10px;
   }
 
-  .logo-footer{
-    text-align: center;
-    width: 25%;
+  .login-sign-up {
+    margin-top: 40px;
+    padding-left: 20px !important;
+  }
+
+  .fa-user-plus {
+    width: 10px;
+    height: auto;
+}
+
+  .caja-copyright{
+    margin-top: 12px;
+  }
+  .card {
+    width: 100%;
+    height: 400px !important;
+    margin: 10px 0px !important;
+  }
+
+  .slider{
+    height: 380px !important;
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slides {
+    height: 350px !important;
   }
 
   #img-footer{
-    width: 30%;
-    margin: 0%;
-  }
- 
-  #nav-principal {
-    justify-content: space-around;
-  }
-  #nav-principal .logo {
-    margin-bottom: 15px;
-  }
-  #nav-principal .menu {
+    width: 50%;
     margin-top: 15px;
+    margin-left: -50px;
   }
 
+  .suscribe-email{
+    height: 30px !important;
+    width: 90% !important;
+  }
+
+  .send-email{
+    margin-top: 10px;
+  }
+ 
   /* productDetail.html */
   .imagen-producto {
     width: 50%;
@@ -105,16 +101,6 @@
     justify-content: space-around;
   }
 
-  .logo-navbar {
-    content: url("/img/versionHorizontal.png");
-  }
-
-  #nav-principal .logo-navbar {
-    width: 19%;
-    height: 19%; 
-    max-width: 19%;
-    max-height: 19%;
-  }
   #barra-lateral-izquierda {
     width: 20%;
   }
@@ -127,23 +113,81 @@
     margin-right: 20px;
     width: 200%;
   }
+
+  .card-sign-up {
+    margin: 20px auto;
+    width: 65%;
+  }
+
+  .buscador {
+    margin-top: 1rem;
+  }
+
+  .logo-size{
+    content: url("/img/versionHorizontal.png");
+    width: 70%;
+  }
+
 }
 
 /* large devices (larger desktops, 1280+) */
 @media only screen and (min-width: 1000px) {
 
-  .logo-footer{
-    text-align: center;
-    width: 25%;
+
+  .card-sign-up {
+    margin: 20px auto !important;
+    width: 60% !important;
+  }
+
+  .caja-copyright{
+    margin-top: 12px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0px !important;
+  }
+
+  .slider{
+    height: 480px !important;
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slides {
+    height: 450px !important;
   }
 
   #img-footer{
-    width: 20%;
-    margin: 0%;
-  }  
+    width: 50%;
+    margin-top: 15px;
+    margin-left: -120px;
+  }
 
-  #nav-principal {
-    justify-content: space-around;
+  .suscribe-email{
+    height: 30px !important;
+    width: 90% !important;
+  }
+
+  .subs{
+    font-size: 3rem;
+  }
+
+  .l-media-menu{
+    margin-left: -30px !important;
+  }
+
+  .l-media-subs{
+    margin-left: 30px !important;
+  }
+
+  #footer-menu-2{
+    margin-top: 74px;
+  }
+
+
+  .send-email{
+    margin-top: 10px;
   }
 
   .botones-navbar-favshopbag {
@@ -154,11 +198,4 @@
     font-size: 2.5rem;
   }
 
-  #nav-principal .logo-navbar {
-    width: 15%;
-    height: 15%; 
-    max-width: 15%;
-    max-height: 15%;
-  }
-  
 }
