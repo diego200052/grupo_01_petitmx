@@ -20,3 +20,25 @@
 
 5. Dejar de hacer.
 * Reunirnos con demasiada anticipación para la realización de las actividades designadas a un futuro sprint.
+
+# Retrospectiva del Sprint 2
+
+![image](https://gustavoveliz.files.wordpress.com/2009/05/startechnique1.gif?w=338&h=305)
+
+1. Comenzar a hacer. 
+* Utilizar frameworks (Materialize) para el front-end.
+* Dentro de las reuniones posteriores discutiremos sobre los inconvenientes que tengamos a la hora de escribir el código y sobre lo que hemos realizado a lo largo de la semana.
+
+2. Hacer más
+* Considerar la dificultad de las tareas para dividirlas en subtareas o bien, que varios trabajemos sobre una misma asignación.
+* Revisar constantemente el tablero de Trello para conocer las nuevas tareas o modificaciones. 
+
+3. Continuar haciendo.
+* Realizar las reuniones semanales para organizarnos.
+* Entregar las tareas asignadas en tiempo y forma.
+
+4. Hacer menos.
+* Evitar generar vistas responsivas desde cero debido a que es más sencillo utilizar herramientas existentes.
+
+5. Dejar de hacer.
+* Nada
