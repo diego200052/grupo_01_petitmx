@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %> 
+
+    <main class="fondo-main">
+      <div class="container">
+        <div class="row">
+          <form action="/home" method="GET">
+            <h2 class="title center-align brown-text">¡REGISTRATE!</h2>
+            <hr>
+            <div class="card-sign-up hoverable">
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Usuario" required  minlength="4" maxlength="8">
+              </div>
+              <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Correo" required>
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Contraseña"  
+                            minlength="8"
+                            pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
+                            title="La contraseña debe comenzar con una letra y contener al menos un dígito"
+                            required>
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirm-password" name="confirm-password" 
+                       placeholder="Confirmar contraseña"
+                       minlength="8"
+                       pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
+                       title="La contraseña debe comenzar con una letra y contener al menos un dígito"
+                       required>
+              </div>
+              <div >
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"  />
+                    <span>Deseo recibir información sobre promociones</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"  />
+                    <span>He leído y acepto la política de privacidad</span>
+                  </label>
+                </p>
+              </div>
+              <div class="registrar">
+                <input type="submit" class="btn-reg-ini"  value="REGISTRAR">
+              </div>
+            </div>
+          </form>
+          <div class="ingresar">
+              <p class="blue-text">¿Ya tienes cuenta?</p>
+              <a href="/login"><input type="button" class="btn-reg-ini" value="INICIAR SESIÓN"></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER -->
+
+  </body>
+  <!-- JavaScript -->
+  <!-- jQuery first, then Popper.js, then Materialize JS -->
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app2.js"></script>
+</html>

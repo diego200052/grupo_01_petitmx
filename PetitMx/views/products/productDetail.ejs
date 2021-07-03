@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %> 
+   
+
+    <main>
+      <section>
+        <div class="flex-container tarjeta-superior-producto">
+          <div class="contenedor-imagen">
+            <img class="imagen-producto" src="/img/productos/shampooHartzPuppy.png"></img>
+          </div>  
+          <div class="tproducto">
+            <h3>Shampoo para puppy Hartz</h3>
+            <hr>
+            <p class="precio-producto"><b>$358</b></p>
+            <h4>Descripción</h4>
+            <div class="descripcion-producto">
+              <p>Producto diseñado para tu mascota</p>
+              <p>Ayuda a evitar la caspa</p>
+              <p>Repelente de pulgas incluido</p>
+            </div>
+            <div class="quantity">
+              
+              <a class="waves-effect waves-light btn-small padding-btn"><i class="material-icons">remove</i></a>
+                
+              <input class="input-count" type="text" name="name" value="1">
+              
+              <a class="waves-effect waves-light btn-small padding-btn"><i class="material-icons">add</i></a>
+
+              <button class="agregar-carrito-button" type="submit" value="Agregar al carrito">
+                Agregar al carrito
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex-container tarjeta-inferior-producto">
+          <div class="caracteristicas-tproducto">
+            <h4>Caracteristicas</h4>
+            <hr>
+            <ul>
+              <li>Botella de 500mL.</li>
+              <li>Plastico resistente.</li>
+            </ul>
+            <h4>Instrucciones de uso</h4>
+            <hr>
+            <ol>
+              <li>Enjuage a su mascota antes de aplicar.</li>
+              <li>Aplique una cantidad aproximada de 20mL sobre la superficie del pelaje.</li>
+              <li>Frote suavemente.</li>
+              <li>Enjuage hasta que no haya restos sobre el pelaje.</li>
+            </ol>
+          </div>
+          <div class="promo-tproducto">
+            <h4>Envios a todo México</h4>
+              <i class="fas fa-truck"></i>
+            <h4>Garantía de safisfacción</h4>
+              <i class="fas fa-shield-alt"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER -->
+    
+  </body>
+
+  <!-- jQuery first, then Popper.js, then Materialize JS -->
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app2.js"></script>
+
+</html>

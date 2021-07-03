@@ -1,92 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mediaqueries.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Fav icon-->
-    <link rel="shortcut icon" type="image/png" href="img/favicon/favicon128.png">
-    <!--  Iconos -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <title>PetItMx</title>
-  </head>
+  <%- include('partials/head.ejs') %>
   <body>
-    <header>
-      <!-- Comienza Navbar -->
-    <nav class="nav-extended yellow darken-2">
-      <div class="row">
-        <div class="col s12 m3 l3 center-align logo">
-          <a href="/"><img class="logo-size" src="img/versionLimpia.png" alt=""></a>
-        </div>
-        <div class="col s12 m5 l5 center-align buscador">
-          <div class="search_wrap search_wrap_3">
-            <div class="search_box">
-              <form action="/" method="GET">
-                <input type="text" class="input" placeholder="search...">
-                <div class="btn btn_common">
-                  <i class="fas fa-search"></i>
-                </div>
-              </form>
-            </div>
-          </div>  
-        </div>
-        <div class="col s12 hide-on-med-and-up">
-          <div class="nav-wrapper burger-menu">
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-              <i class="fas fa-bars"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col m4 l4 hide-on-small-only login-sign-up">
-          <div class="row">
-            <div class="col m6 l6">
-              <a href="/register">
-                <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
-              </a>       
-            </div>
-            <div class="col m6 l6">
-              <a href="/login">
-                <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
-              </a>   
-            </div>
-          </div>
-        </div>             
-      </div>
-    </nav>
-    <!-- Fin del navbar-->
-
-    <!-- Contenido de menú versión mobile -->
-    <ul class="sidenav" id="mobile-demo">
-      <li class="active"><a href="/">Home</a></li>
-      <li><a href="#">Nosotros</a></li>
-      <li><a href="#" data-target='dropdown1' class='dropdown-trigger'>Animales</a>
-      </li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contacto</a></li>
-      <li><div class="divider"></div></li>
-      <li><a href="/register"><i class="material-icons">person_add</i>Registrate</a></li>
-      <li><a href="/login"><i class="material-icons">forward</i>Login</a></li>
-    </ul>
-
-     <!-- Estructura Dropdown para animales -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="#!">Perros</a></li>
-      <li><a href="#!">Gatos</a></li>
-      <li><a href="#!">Peces</a></li>
-      <li><a href="/">Otros</a></li>
-    </ul>
-
-    </header>
-   
+    <%- include('partials/header.ejs') %> 
     <main>
       <!-- Inicio de Slider -->
       <div class="slider">
@@ -264,59 +180,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="page-footer yellow darken-2">
-      <div class="container">
-        <div class="row center-align">
-          <div class="col l4 m4 s6">
-            <img id="img-footer" src="./img/versionVertical.png" alt="LogoFooter">
-          </div>
-          <div class="col l2 m4 s6 l-media-menu">
-            <h4 class="text-footer-menu">Menú</h4>
-            <ul>
-              <li><a class="text-footer-menu size" href="#!">Home</a></li>
-              <li><a class="text-footer-menu size" href="#!">Nosotros</a></li>
-              <li><a class="text-footer-menu size" href="#!">Productos</a></li>
-              <li><a class="text-footer-menu size" href="#!">Contacto</a></li>
-            </ul>
-          </div>
-          <div class="col l2 hide-on-med-and-down" id="footer-menu-2">
-            <ul>
-              <li><a class="text-footer-menu size" href="#!">Home</a></li>
-              <li><a class="text-footer-menu size" href="#!">Nosotros</a></li>
-              <li><a class="text-footer-menu size" href="#!">Productos</a></li>
-              <li><a class="text-footer-menu size" href="#!">Contacto</a></li>
-            </ul>
-          </div>
-          <div class="col l4 m4 s12 center-align l-media-subs">
-            <form id="subscribe" action="/" method="GET">
-              <h4 class="subs">¡Suscríbete!</h4>
-              <input class="suscribe-email" id="email" type="email" class="validate" placeholder="Correo...">
-              <button class="btn send-email waves-effect waves-pink waves-ripple" type="submit" name="action">Enviar
-                <i class="material-icons right">send</i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          <div class="row redes-copyright">           
-            <div class="col s12 m8 l6 caja-redes center-align">
-              <span id="redes">Síguenos</span>
-              <a class="right-align" href="https://www.facebook.com/" target="_blank"><img class="img-redes" src="img/redes/icons8-facebook-100.png" alt=""></a>
-              <a class="right-align" href="https://twitter.com/" target="_blank"><img class="img-redes" src="img/redes/icons8-twitter-100.png" alt=""></a>
-              <a class="right-align" href="https://www.instagram.com/" target="_blank"><img  class="img-redes"src="img/redes/icons8-instagram-100.png" alt=""></a>
-            </div>
-            <div class="col s12 m4 l6 caja-copyright center-align">
-              <p>© 2021 Copyright by PetItMx</p>
-            </div>
-
-          </div>
-        
-        </div>
-      </div>
-    </footer>
-
+    <%- include('partials/footer.ejs') %>
     <!--FIN DEL FOOTER -->
 
   </body>

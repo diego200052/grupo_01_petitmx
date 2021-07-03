@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %> 
+   
+
+    <main>
+        <div class="container-product">
+            <div class="productList">
+                <div class="productTitle">
+                  <i class="fas fa-shopping-cart">
+                      <span>Carrito de Compras</span>
+                  </i>
+                </div>
+                <span class="producto textFormat">PRODUCTO</span>
+                <span class="precio textFormat">PRECIO</span>
+                <span class="cantidad textFormat">CANTIDAD</span>
+                <span class="subtotal textFormat">SUBTOTAL</span>
+                <hr class="separacion">
+                <div class="productContent">
+                    <!-- Producto 1 Ejemplo-->
+                    <div class="productDetail">
+                        <img class="imgProduct" src="/img/productos/packPremiumCroquetasPerro.jpg" alt="...">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="productPrice">
+                        <p>$250</p>
+                    </div>
+                    <div class="productAmount">
+                        <input type="button" name="suma" id="resta" value="-">
+                        <span>1</span>
+                        <input type="button" name="suma" id="suma" value="+">
+                    </div>
+                    <div class="productSubtotal">
+                        <p>$300</p>
+                    </div>
+                    <!-- Producto 2 Ejemplo-->
+                    <div class="productDetail">
+                        <img class="imgProduct" src="/img/productos/cajaArenaGato.jpg" alt="...">
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="productPrice">
+                        <p>$250</p>
+                    </div>
+                    <div class="productAmount">
+                        <input type="button" name="suma" id="resta" value="-">
+                        <span>1</span>
+                        <input type="button" name="suma" id="suma" value="+">
+                    </div>
+                    <div class="productSubtotal">
+                        <p>$300</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productTotal">
+                <div class="productTitle">
+                  <i class="fas fa-shopping-basket">
+                      <span>Total del carrito</span>
+                  </i>
+                </div>
+                <div class="subtotal-checkout flex-container">
+                  <span class="textFormat">Subtotal</span>
+                  <span>$484</span>
+                </div>
+                <div class="cupon-checkout flex-container">
+                  <span class="textFormat">Cupón: mascota</span>
+                  <span>-$50</span>
+                </div>
+                <div class="envio-checkout flex-container">
+                  <span class="textFormat">Envío</span>
+                  <span>$150</span>
+                </div>
+                <hr class="separacion">
+                <div class="total-checkout flex-container">
+                  <span class="textFormat">Total</span>
+                  <span>$584</span>
+                </div>
+                <div class="productContent flex-container">
+                    <p>Cupón de descuento</p>
+                    <input type="text"></input>
+                    <button value="aplicar-cupon">Aplicar cupón</button>
+                </div>
+                <br><br>
+                <button value="aplicar-cupon">Finalizar compra</button>
+            </div>
+        </div>
+			
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER -->
+    
+  </body>
+
+  <!-- jQuery first, then Popper.js, then Materialize JS -->
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app2.js"></script>
+
+</html>

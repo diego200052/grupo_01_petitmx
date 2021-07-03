@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %> 
+   
+
+    <main class="fondo-main">
+      <div class="container">
+        <div class="row">
+
+          <form action="/home" method="GET">
+            <h2 class="title center-align brown-text">Iniciar Sesión</h2>
+            <hr>
+            <div class="card-sign-up hoverable">
+
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Usuario" required  minlength="4" maxlength="8">
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+              </div>
+              
+              <div>
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in"  />
+                    <span>Recordar mis datos</span>
+                  </label>
+                </p>
+              </div>
+
+              <div class="ingresar">
+                  <input type="submit" class="btn-reg-ini"  value="LOGIN">
+              </div>
+            </div>
+          </form>
+
+          <div class="registrar">
+            <span>¿Olvidaste tu <a href="#">contraseña?</a></span><br>
+            <a href="/register">Crea un nuevo usuario ➡ </a>
+          </div>
+
+        </div>
+
+      </div>      
+    </main>
+    
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER -->
+    
+    <!-- jQuery first, then Popper.js, then Materialize JS -->
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app2.js"></script>
+
+  </body>
+</html>
