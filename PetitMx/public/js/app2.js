@@ -8,6 +8,8 @@ $(document).ready(function(){
     $('.dropdown-trigger').dropdown();
     $('.carousel').carousel();
     $('.slider').slider();
+    $('#textarea1').val('New Text');
+    M.textareaAutoResize($('#textarea1'));
 });
 
   

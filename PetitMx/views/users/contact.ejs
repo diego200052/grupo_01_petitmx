@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %> 
+
+    <main class="fondo-main">
+      <div class="row">
+        <div class="col l8 m8 s12">
+          <form action="/home" method="GET">
+            <h2 class="title center-align brown-text">CONTÁCTANOS</h2>
+            <hr>
+            <div class="card-sign-up hoverable">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" id="name" name="name" placeholder="Ej: Diego" required  minlength="4" maxlength="8">
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_box</i>
+                <input type="text" id="first-name" name="first-name" placeholder="Ej: Ventura" required  minlength="4" maxlength="8">
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate" placeholder="Ej: diego@gmail.com" required>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_telephone" type="tel"  placeholder="Ej: 5563134566" class="validate">
+              </div>
+
+              <div class="input-field col s12">
+                <i class="material-icons prefix">short_text</i>
+                <textarea id="textarea1" class="materialize-textarea" placeholder="Mensaje..."></textarea>
+              </div>
+              
+              <div class="registrar">
+                <input type="submit" class="btn-reg-ini"  value="ENVIAR">
+              </div>
+              
+            </div>
+          </form>
+        </div>
+
+        <div class="col l4 m4 hide-on-small-only">
+          <div class="row">
+            <div class="col l12 m12"><img class="contact-image circle" src="../img/redes/contacto.jpg"></div>
+            <div class="col l12 m12"><img class="contact-image circle" src="../img/redes/contacto2.jpg"></div>
+            <div class="col l12 m12"><img class="contact-image circle" src="../img/redes/contacto3.jpg"></div>
+          </div>              
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+    <!--FIN DEL FOOTER -->
+
+  </body>
+  <!-- JavaScript -->
+  <!-- jQuery first, then Popper.js, then Materialize JS -->
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app2.js"></script>
+</html>

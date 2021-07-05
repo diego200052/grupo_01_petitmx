@@ -4,6 +4,9 @@ const controlador = {
     },
     register: (req, res) => {
         res.render('users/register');
+    },
+    contact: (req, res) => {
+        res.render('users/contact');
     }
 };
 
