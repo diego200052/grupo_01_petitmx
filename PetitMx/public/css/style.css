@@ -945,3 +945,26 @@ ul>li>a.size{
 .row.mb0 {
   margin-bottom: 0px;
 }
+/* Contacto */
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  margin-top: 15px;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.ubicacion{
+  padding: 10px 15px;
+  margin-bottom: 30px !important;
+}
+
+/* Fin de Contacto */
