@@ -332,6 +332,7 @@ hr{
   border-radius: 7px;
   margin-left: 19px;
   margin-right: 19px;
+  display: inline-block;
 }
 
 #menu > li {
@@ -408,27 +409,36 @@ hr{
   }
 }
 
-#nav-principal .submenu li a {
+#menu .submenu li a {
   padding-left: 15px;
   text-shadow: none;
   border-top: dotted 1px transparent;
   border-bottom: dotted 1px transparent;
   transition: all .15s linear;
+  width: 200px;
 }
 
-#nav-principal ul > li > a:hover,
-#nav-principal ul > li > a:visited,
-#nav-principal ul > li > a:link,
-#nav-principal ul > li > a:active {
+#menu ul > li > a:hover,
+#menu ul > li > a:visited,
+#menu ul > li > a:link,
+#menu ul > li > a:active {
   color: white;
   text-decoration: none;
 }
 
-#nav-principal .submenu > li > a:hover {
+#menu .submenu > li > a:hover {
   color: white;
   border-top: dotted 1px rgba(255,255,255,.15);
   border-bottom: dotted 1px rgba(255,255,255,.15);
   background: var(--rosa);
+}
+
+#menu .submenu > li > a {
+  border-bottom: solid 1px rgba(255,255,255,.25);
+}
+
+#menu .submenu > li:first-child > a {
+  border-top: solid 1px rgba(255,255,255,.25);
 }
 
 
@@ -587,17 +597,14 @@ hr{
 
 /*NAVBAR*/
 
-.logo{
-  margin-top: 20px;
-}
-
-.logo-size{
-  width: 80%;
+.hide-on-small-only .logo-size{
+  width: 75%;
   padding: 15px 0px;
 }
 
-.buscador{
-  margin-top: -3rem;
+.hide-on-med-and-up .logo-size {
+  width: 60%;
+  padding: 15px 0px;
 }
 
 .container .input{
@@ -606,26 +613,15 @@ hr{
 	color: black;
 }
 
-.search_wrap{
-	width: 300px;
-	margin: 38px auto;
-  
-}
-
 .search_wrap .search_box{
 	position: relative;
-	width: 300px;
 	height: 35px;
 }
 
 .search_wrap .search_box .input{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 70%;
+	width: 100%;
 	height: 65%;
 	padding: 10px 20px;
-	border-radius: 3px;
 	font-size: 18px;
   background-color: var(--rosa);
   border:none;
@@ -653,17 +649,16 @@ hr{
 
 
 .search_wrap.search_wrap_3 .search_box .input{
-	padding-right: 80px;
-}
-
-
-.search_wrap.search_wrap_3 .search_box .input{
 	border-radius: 50px;
 }
 
 .search_wrap.search_wrap_3 .search_box .btn{
-	right: -10px;
 	border-radius: 50%;
+}
+
+.barra-busqueda {
+  justify-content: flex-end;
+  margin-top: 10px;
 }
 
 
@@ -674,7 +669,7 @@ hr{
   margin-right: auto;
   width: 45px;
   height: 50px;
-  margin-top: -10px;
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
@@ -939,3 +934,14 @@ ul>li>a.size{
 
 }
 
+.botones-navbar .row {
+  margin-bottom: 0px;
+}
+
+.row.pt1 {
+  padding-top:10px;
+}
+
+.row.mb0 {
+  margin-bottom: 0px;
+}
