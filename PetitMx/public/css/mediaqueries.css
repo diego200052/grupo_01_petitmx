@@ -1,7 +1,7 @@
 /*MEDIA QUERIES*/ 
 
-/* Teléfonos & larger smartphones (481 - 767) */
-@media only screen and (max-width: 767px) {  
+/* Teléfonos & larger smartphones (481 - 600) */
+@media only screen and (max-width: 600px) {  
 
   #inicioSesion {
     grid-template-columns: 1fr;
@@ -14,8 +14,12 @@
 }
 
 
-/* Medium devices (landscape tablets, laptops, 768px - 1279px) */
-@media only screen and (min-width: 768px) {
+/* Medium devices (landscape tablets, laptops, 601px - 1279px) */
+@media only screen and (min-width: 601px) {
+
+  .row .col.m4.buscador {
+    margin-top: 35px;
+  }
 
   /* Contacto */
 
@@ -33,11 +37,6 @@
   
   .icon-padding{
     padding-left: 10px;
-  }
-
-  .login-sign-up {
-    margin-top: 40px;
-    padding-left: 20px !important;
   }
 
   .fa-user-plus {
@@ -132,15 +131,15 @@
     margin-top: 1rem;
   }
 
-  .logo-size{
-    content: url("/img/versionHorizontal.png");
-    width: 70%;
-  }
-
 }
 
 /* large devices (larger desktops, 1280+) */
 @media only screen and (min-width: 1000px) {
+
+  .hide-on-small-only .logo-size{
+    width: 60%;
+    padding: 15px 0px;
+  }
 
    /* Contacto */
 

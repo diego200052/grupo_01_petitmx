@@ -1,22 +1,67 @@
 <header>
     <!-- Comienza Navbar -->
   <nav class="nav-extended yellow darken-2">
-    <div class="row">
-      <div class="col s12 m3 l3 center-align logo">
+    <div class="row pt1">
+
+      <div class="col s12 center-align logo hide-on-med-and-up">
         <a href="/"><img class="logo-size" src="/img/versionLimpia.png" alt=""></a>
       </div>
-      <div class="col s12 m5 l5 center-align buscador">
-        <div class="search_wrap search_wrap_3">
-          <div class="search_box">
-            <form action="/" method="GET">
-              <input type="text" class="input" placeholder="search...">
-              <div class="btn btn_common">
-                <i class="fas fa-search"></i>
-              </div>
-            </form>
-          </div>
-        </div>  
+      <div class="col m3 l3 center-align logo hide-on-small-only">
+        <a href="/"><img class="logo-size" src="/img/versionHorizontal.png" alt=""></a>
       </div>
+
+      <div class="col offset-s1 s12 m9 l9 buscador">
+        <div class="row">
+          <div class="col s10 offset-m1 m5 offset-l1 l5 center-align">
+            <div class="search_wrap search_wrap_3">
+              <div class="search_box">
+                <form class="flex-container barra-busqueda" action="/" method="GET">
+                  <input type="text" class="input" placeholder="search...">
+                  <div class="btn btn_common">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col m6 offset-l1 l5 login-sign-up botones-navbar hide-on-small-only">
+            <div class="row">
+              <div class="col">
+                <a href="/users/register">
+                  <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
+                </a>   
+              </div>
+              <div class="col offset-m1">
+                <a href="/users/login">
+                  <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row hide-on-small-only mb0">
+        <div class="col offset-m1 m11 l8 offset-xl1">
+          <div class="menu">
+            <ul id="menu" class="flex-container">
+              <li><a class="boton-inicial" href="#">Home</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Animales</a>
+                <ul class="submenu">
+                  <li><a href="#">Perros</a></li>
+                  <li><a href="#">Gatos</a></li>
+                  <li><a href="#">Peces</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a class="boton-final" href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+      
       <div class="col s12 hide-on-med-and-up">
         <div class="nav-wrapper burger-menu">
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
@@ -24,21 +69,8 @@
           </a>
         </div>
       </div>
-      <div class="col m4 l4 hide-on-small-only login-sign-up">
-        <div class="row">
-          <div class="col m6 l6">
-            <a href="/users/register">
-              <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
-            </a>       
-          </div>
-          <div class="col m6 l6">
-            <a href="/users/login">
-              <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
-            </a>   
-          </div>
-        </div>
-      </div>             
     </div>
+    
   </nav>
   <!-- Fin del navbar-->
 
