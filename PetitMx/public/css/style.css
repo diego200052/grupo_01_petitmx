@@ -655,6 +655,11 @@ hr{
 	border-radius: 50%;
 }
 
+.buscador {
+  width: 80% !important;
+  margin-left: 35px !important;
+}
+
 .barra-busqueda {
   justify-content: flex-end;
   margin-top: 10px;

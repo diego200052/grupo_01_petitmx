@@ -129,6 +129,8 @@
 
   .buscador {
     margin-top: 1rem;
+    width: 75% !important;
+    margin-left: 0px !important;
   }
 
 }
