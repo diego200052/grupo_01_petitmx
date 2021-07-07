@@ -133,6 +133,11 @@
     margin-left: 0px !important;
   }
 
+  .menu{
+    margin-top: -30px;
+  }
+  
+
 }
 
 /* large devices (larger desktops, 1280+) */
@@ -216,6 +221,10 @@
 
   .boton-navbar-fav {
     font-size: 2.5rem;
+  }
+
+  .menu{
+    margin-top: -10px;
   }
 
 }
