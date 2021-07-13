@@ -131,111 +131,24 @@ hr{
 
 /* ESTILOS DE PRODUCTCART*/
 
-.container-product{
-  width: 90%;
-  margin: 20px auto ;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.product-size{
+  height: auto;
+  width: 50%;
 }
 
-.productTitle{
-  flex-grow: 1;
+.btn-margin{
+  margin-left: 20px;
 }
 
-.productList{
-  border: solid 1px var(--rojo);
-  border-radius: 5px;
-  width: 100%;
+.cart-margin{
+  margin-top: 25px;
+}
+
+.btn-compra{
   margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.productContent{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-.textFormat{
-  font-weight: bold;
-  font-size: 7px;
-  padding: 10px 0px 10px 20px;
-}
-
-.producto{
-  width: 40%;
-  align-self: center;
-}
-
-.separacion{
-  border: solid 1px var(--gris);
-  width: 97%;
-  margin: 0px auto;
-}
-
-.precio{
-  width: 20%;
-  align-self: center;
-}
-
-.cantidad{
-  width: 20%;
-  align-self: center;
-}
-
-.subtotal{
-  width: 20%;
-  align-self: center;
-}
-
-.productDetail{
-  width: 40%;
-  align-self: center;
-  font-size: 12px;
-}
-
-.productDetail p {
-  text-align: center;
-}
-
-.productPrice{
-  width: 20%;
-  align-self: center;
-  font-size: 12px;
-}
-
-.productAmount{
-  width: 20%;
-  align-self: center;
-  font-size: 12px;
-  padding-bottom: 17px;
-}
-
-.productSubtotal{
-  width: 20%;
-  align-self: center;
-  font-size: 12px;
-}
-
-.img-product{
-  width: 100% !important;
-  height: auto !important;
-  margin: 0px auto !important;
-  padding-top: 15px !important;
-}
-
-#resta, #suma{
-  background-color: transparent;
-  border:none;
-  font-weight: bold;
-}
-
+/* Fin productCart*/
 
 /* productDetail.html */
 

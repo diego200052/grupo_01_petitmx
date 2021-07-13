@@ -143,11 +143,42 @@
     margin-top: -30px;
   }
   
+  .btn-compra{
+    margin-top: 30px;
+  }
+
 
 }
 
 /* large devices (larger desktops, 1280+) */
 @media only screen and (min-width: 1000px) {
+
+  .margin-cupon{
+    margin-right: 30px;
+  }
+
+  .product-size{
+    height: 150px;
+    width: 150px;
+  }
+  
+  .text-product-cart{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-compra{
+    margin-top: 30px;
+  }
+
+  .nosotros {
+    width: 90% !important;
+  }
+
+  .carrito{
+    width: 90% !important;
+  }
 
   .v-align{
     display: flex;
