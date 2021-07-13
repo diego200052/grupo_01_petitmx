@@ -17,6 +17,12 @@
 /* Medium devices (landscape tablets, laptops, 601px - 1279px) */
 @media only screen and (min-width: 601px) {
 
+  .v-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .row .col.m4.buscador {
     margin-top: 35px;
   }
@@ -142,6 +148,12 @@
 
 /* large devices (larger desktops, 1280+) */
 @media only screen and (min-width: 1000px) {
+
+  .v-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .hide-on-small-only .logo-size{
     width: 60%;

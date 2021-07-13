@@ -973,3 +973,35 @@ ul>li>a.size{
 }
 
 /* Fin de Contacto */
+
+/* NOSOTROS */
+.parallax-container{
+  height: 280px !important;
+}
+
+.img-parallax{
+  height: auto;
+  width: 100%;
+}
+
+.text-somos{
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+i.icon-brown{
+  color: var(--cafe);
+}
+
+.letra1{
+  font-style: italic;
+  font-size: 15px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.separation{
+  margin-bottom: 25px;
+}
+/* FIN DE NOSOTROS */
