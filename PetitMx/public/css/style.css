@@ -75,6 +75,19 @@ footer div img {
   margin-bottom: 10px;
 }
 
+.btn-edit-prod {
+  /*width: 150px;*/
+  background-color: var(--cafe);
+  border: none;
+  /*height: 49px;*/
+  padding: 1.05em;
+  border-radius: 49px;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
 
 .btn-reg-ini {
   width: 150px;
