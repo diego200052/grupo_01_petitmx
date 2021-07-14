@@ -17,6 +17,15 @@
 /* Medium devices (landscape tablets, laptops, 601px - 1279px) */
 @media only screen and (min-width: 601px) {
 
+  .row.pt1 {
+    padding-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .row.mb0 {
+    margin-bottom: 20px;
+  }
+
   .v-align{
     display: flex;
     justify-content: center;
@@ -147,11 +156,38 @@
     margin-top: 30px;
   }
 
+  #position-cart-fav{
+    margin-bottom: 0px;
+    position: relative;
+    top: -20px;
+    right: 15px;
+  }
+
+  #menu{
+    position: relative;
+    left: 35px;
+  }
 
 }
 
 /* large devices (larger desktops, 1280+) */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1280px) {
+
+  #position-cart-fav{
+    margin-bottom: 0px;
+    position: relative;
+    top: -20px;
+    right: 195px;
+  }
+
+  .row.mb0 {
+    margin-bottom: 20px;
+  }
+
+  .row.pt1 {
+    padding-top: 10px;
+    margin-bottom: 0px;
+  }
 
   .margin-cupon{
     margin-right: 30px;
@@ -268,6 +304,11 @@
 
   .menu{
     margin-top: -10px;
+  }
+
+  #menu{
+    position: relative;
+    left: 360px;
   }
 
 }
