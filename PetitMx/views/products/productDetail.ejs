@@ -9,17 +9,15 @@
       <section>
         <div class="flex-container tarjeta-superior-producto">
           <div class="contenedor-imagen">
-            <img class="imagen-producto" src="/img/productos/shampooHartzPuppy.png"></img>
+            <img class="imagen-producto" src="/img/productos/<%= producto.imagen %>"></img>
           </div>  
           <div class="tproducto">
-            <h3>Shampoo para puppy Hartz</h3>
+            <h3><%= producto.nombre %></h3>
             <hr>
-            <p class="precio-producto"><b>$358</b></p>
+            <p class="precio-producto"><b>$<%= producto.precio %></b></p>
             <h4>Descripción</h4>
             <div class="descripcion-producto">
-              <p>Producto diseñado para tu mascota</p>
-              <p>Ayuda a evitar la caspa</p>
-              <p>Repelente de pulgas incluido</p>
+              <p><%= producto.descripcion %></p>
             </div>
             <div class="quantity">
               
@@ -33,6 +31,16 @@
                 Agregar al carrito
               </button>
 
+              <br><br>
+
+              <a href="/admin/editProduct/<%= producto.id %>" class="waves-effect waves-orange btn agregar-carrito-button" type="submit" value="Agregar al carrito">
+                Editar producto
+              </a>
+
+              <form onsubmit="return confirm('¿Deseas eliminar el producto?');" action="/admin/deleteProduct/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="waves-effect waves-red btn agregar-carrito-button">ELIMINAR</button>
+              </form>
+
             </div>
           </div>
         </div>
@@ -43,16 +51,12 @@
             <h4>Caracteristicas</h4>
             <hr>
             <ul>
-              <li>Botella de 500mL.</li>
-              <li>Plastico resistente.</li>
+              <li><%= producto.caracteristicas %></li>
             </ul>
             <h4>Instrucciones de uso</h4>
             <hr>
             <ol>
-              <li>Enjuage a su mascota antes de aplicar.</li>
-              <li>Aplique una cantidad aproximada de 20mL sobre la superficie del pelaje.</li>
-              <li>Frote suavemente.</li>
-              <li>Enjuage hasta que no haya restos sobre el pelaje.</li>
+              <li><%= producto.instrucciones %></li>
             </ol>
           </div>
           <div class="promo-tproducto">

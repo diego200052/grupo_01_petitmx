@@ -239,6 +239,16 @@ hr{
   cursor: pointer;
 }
 
+.waves-effect.waves-red.btn.agregar-carrito-button {
+  background-color: #F1948A;
+  color: black;
+}
+
+.waves-effect.waves-orange.btn.agregar-carrito-button {
+  background-color: #F8C471;
+  color: black;
+}
+
 .descripcion-producto {
   margin-left: 20px;
   margin-top: 20px;

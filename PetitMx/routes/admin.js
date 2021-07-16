@@ -9,13 +9,13 @@ const adminController = require('../controllers/adminController');
 /*** GET ALL PRODUCTS ***/
 
 /*** CREATE ONE PRODUCT ***/
-router.get('/addProduct', adminController.addProduct);
+router.get('/addProduct/:id', adminController.addProduct);
 
 /*** EDIT ONE PRODUCT ***/
-router.get('/editProduct', adminController.editProduct);
+router.get('/editProduct/:id', adminController.editProduct);
 
 /*** DELETE ONE PRODUCT***/
-router.delete('/:id', adminController.destroyProduct);
+router.delete('/deleteProduct/:id', adminController.destroyProduct);
 
 
 module.exports = router;

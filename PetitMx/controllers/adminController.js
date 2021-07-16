@@ -20,7 +20,7 @@ const controlador = {
 			return product.id != req.params.id;
 		});
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		res.redirect('admin/products');
+		res.redirect('/products');
 	}
 };
 
