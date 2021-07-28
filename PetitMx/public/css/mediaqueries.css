@@ -311,4 +311,9 @@
     left: 360px;
   }
 
+  .imagen-producto {
+    height: 80%;
+    width: auto;
+  }
+
 }

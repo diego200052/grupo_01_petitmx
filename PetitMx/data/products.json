@@ -124,22 +124,22 @@
     "id": 14,
     "nombre": "Kub, Tromp and Lesch",
     "marca": "Runte-Watsica",
-    "precio": 1205.67,
+    "precio": "1205.67",
     "descripcion": "volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum",
     "caracteristicas": "nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing",
     "instrucciones": "odio cras mi pede malesuada in imperdiet et commodo vulputate",
-    "imagen": "cajaArenaGato.jpg",
-    "categoria": "Perros"
+    "imagen": "image-1627436757760.jpg",
+    "categoria": "Peces"
   },
   {
     "id": 15,
-    "nombre": "Hauck-Ullrich",
-    "marca": "Lemke and Sons",
-    "precio": 2722.28,
-    "descripcion": "nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit",
-    "caracteristicas": "nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus",
-    "instrucciones": "lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus",
+    "nombre": "Comida para peces",
+    "marca": "Marca patito",
+    "precio": "500",
+    "descripcion": "Descripción 1",
+    "caracteristicas": "Frasco de 500gr",
+    "instrucciones": "No sobrealimentar a los peces.",
     "imagen": "packPremiumCroquetasPerro.jpg",
-    "categoria": "Gatos"
+    "categoria": "Peces"
   }
 ]
