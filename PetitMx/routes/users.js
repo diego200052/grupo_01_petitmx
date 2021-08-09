@@ -9,10 +9,10 @@ let { check, validationResult, body } = require('express-validator');
 //para guardar los datos en users.json***
 const storageDisk = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, __dirname + '/../../public/img/users/avatars');
+		cb(null, path.join(__dirname, '../public/img/users/avatars'));
 	},
 	filename: (req, file, cb) => {
-		let imageFinalName = `user_avatar_${Date.now()}${path.extname(file.originalname)}`;
+		let imageFinalName = 'user_avatar_'+ Date.now() + path.extname(file.originalname);
 		cb(null, imageFinalName);
 	}
 });
@@ -38,33 +38,12 @@ router.post('/register', upload.single('avatar'),[
 router.get('/login', usersController.login);
 
 /* POST - Login. */
-router.post('/login', usersController.processLogin);
+// router.post('/login', usersController.processLogin);
 
 /* GET - Contact. */
 router.get('/contact', usersController.contact);
 
-/* GET - Listado. */
-router.get('/listado', usersController.show);
-router.get('/listado-tabla', usersController.showTabla);
 
-/* >>>>>>>>>>>>>>>>> BORRAR User desde Listado <<<<<<<<<<<<<<<<<<<<< */
-router.post ('/borrar', usersController.borrarUser);
-
-/* >>>>>>>>>>>>>>>>> cambiar ROL de usuario <<<<<<<<<<<<<<<<<<<<< */
-router.post('/changerole', usersController.changeRole);
-
-/* GET - Login. */
-router.get('/profile/:id', usersController.profile);
-
-/*  EDITAR */
-router.get('/editarUser/:id', usersController.edit);
-router.post('/editarUser/:id', upload.single('avatar'), usersController.update);
-/* EDITAR AVATAR */
- router.get('/editarAvatar/:id',  usersController.editarAvatar);
- router.post('/editarAvatar/:id', upload.single('avatar'), usersController.updateAvatar);
-
-/* GET - /users/logout */
-router.get('/logout', usersController.logout);
 
 
 module.exports = router;
