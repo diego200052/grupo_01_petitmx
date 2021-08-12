@@ -42,3 +42,23 @@
 
 5. Dejar de hacer.
 * Nada
+
+# Retrospectiva del Sprint 3
+
+![image](https://gustavoveliz.files.wordpress.com/2009/05/startechnique1.gif?w=338&h=305)
+
+1. Comenzar a hacer. 
+* Utilizar más la plataforma de Trello, ya que en ocasiones la carga de trabajo incrementa en comparación con otros sprints.
+
+2. Hacer más
+* Atender dudas y discutir sobre el trabajo realizado a lo largo de la semana.
+
+3. Continuar haciendo.
+* Emplear metodologías ágiles para la organización de las actividades.
+* Mantener las buenas prácticas en el desarrollo del código.
+
+4. Hacer menos.
+* Evitar retrasos en las entregas de las actividades asociadas al sprint.
+
+5. Dejar de hacer.
+* Nada
