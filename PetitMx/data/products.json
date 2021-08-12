@@ -3,12 +3,12 @@
     "id": 3,
     "nombre": "Osinski, Stark and Gleason",
     "marca": "White-Heidenreich",
-    "precio": 1911.84,
+    "precio": "1911",
     "descripcion": "consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat",
     "caracteristicas": "molestie lorem quisque ut erat curabitur gravida nisi at nibh",
     "instrucciones": "erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis",
     "imagen": "packPremiumCroquetasPerro.jpg",
-    "categoria": "Perros"
+    "categoria": "Peces"
   },
   {
     "id": 4,
@@ -129,17 +129,6 @@
     "caracteristicas": "nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing",
     "instrucciones": "odio cras mi pede malesuada in imperdiet et commodo vulputate",
     "imagen": "image-1627436757760.jpg",
-    "categoria": "Peces"
-  },
-  {
-    "id": 15,
-    "nombre": "Comida para peces",
-    "marca": "Marca patito",
-    "precio": "500",
-    "descripcion": "Descripción 1",
-    "caracteristicas": "Frasco de 500gr",
-    "instrucciones": "No sobrealimentar a los peces.",
-    "imagen": "packPremiumCroquetasPerro.jpg",
     "categoria": "Peces"
   }
 ]
