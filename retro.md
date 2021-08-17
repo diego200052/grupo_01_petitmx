@@ -62,3 +62,23 @@
 
 5. Dejar de hacer.
 * Nada
+
+
+# Retrospectiva del Sprint 4
+![image](https://gustavoveliz.files.wordpress.com/2009/05/startechnique1.gif?w=338&h=305)
+
+1. Comenzar a hacer. 
+Organizarse individualmente en tiempo para la entrega de las actividades asignadas.
+
+2. Hacer más
+Subir algún avance aunque sea lo mínimo.
+
+3. Continuar haciendo.
+Emplear metodologías ágiles para la organización de las actividades.
+Mantener las buenas prácticas en el desarrollo del código.
+
+4. Hacer menos.
+Evitar retrasos en las entregas de las actividades asociadas al sprint.
+
+5. Dejar de hacer.
+Aplazar las actividades.
