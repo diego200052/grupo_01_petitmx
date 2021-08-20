@@ -26,7 +26,6 @@ app.use( session({
     resave: false,
     saveUninitialized: false,
   }) );
-app.use(loginCookie);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
@@ -34,6 +33,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(loginCookie);
 
 //Levantando el servidor en el puerto 3030
 app.listen(3030,() => console.log('Server running in 3030 port'));
