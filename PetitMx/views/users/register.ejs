@@ -8,19 +8,26 @@
       <div class="container">
         <div class="row">
           <h2 class="title center-align brown-text">¡REGISTRATE!</h2>
+
+          <% if (locals.errors) { %>
+            <% errors.forEach( (error) => { %>
+              <h4 class="error">Error: <%= error.msg %></h4>
+            <% }); %>
+          <% } %>
+          
           <form action="/users/register" method="POST" enctype="multipart/form-data"  onsubmit="return alert('Usuario creado con éxito!');">     
               
               <div class="card-sign-up hoverable"> <!-- INICIO de bloque de registro -->
                 <div class="row">
                   <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input type="text" placeholder="Ej: Vicente"  id="first_name" name="first_name" data-name="Nombre">
+                    <input type="text" placeholder="Ej: Vicente" value="<%= locals.old && old.first_name %>" id="first_name" name="first_name" data-name="Nombre">
                     <label for="first_name">Nombre: </label>
                     <div class="invalid-feedback"> </div>
                   </div>
                   <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input type="text" placeholder="Ej: Ruiz"  id="last_name" name="last_name" data-name="Apellido">
+                    <input type="text" placeholder="Ej: Ruiz" value="<%= locals.old && old.last_name %>" id="last_name" name="last_name" data-name="Apellido">
                     <label for="last_name">Apellido: </label>
                     <div class="invalid-feedback"> </div>
                   </div>
@@ -28,7 +35,7 @@
                 <div class="row">
                   <div class="input-field">
                     <i class="material-icons prefix">email</i>
-                    <input type="email" id="email" name="email" placeholder="Ej: vicente@gmail.com" data-name="Email" required>
+                    <input type="email" id="email" name="email" value="<%= locals.old && old.email %>" placeholder="Ej: vicente@gmail.com" data-name="Email" required>
                     <label for="email">Correo: </label>
                     <div class="invalid-feedback"> </div>
                   </div>
@@ -77,7 +84,7 @@
                   </p>
                   <p>
                     <label>
-                      <input type="checkbox" class="filled-in"  />
+                      <input type="checkbox" class="filled-in" required />
                       <span>He leído y acepto la política de privacidad</span>
                     </label>
                   </p>

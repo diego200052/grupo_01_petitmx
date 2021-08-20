@@ -30,7 +30,7 @@ router.post('/register', upload.single('avatar'),[
     check('first_name').isAlpha().withMessage('El campo Nombre debe contener solo letras').isLength({min:3}).withMessage('El campo Nombre debe contener mínimo de 3 caracteres'),
     check('last_name').isAlpha().withMessage('El campo Apellido debe contener solo letras').isLength({min:3}).withMessage('El campo Apellido debe contener mínimo de 3 caracteres'),
     check('email').isEmail().withMessage('Debe ingresar un Email valido'),
-    check('password').isLength({ min: 3 }).withMessage('La Contraseña debe tener por lo menos 3 caracteres'),
+    check('password').isLength({ min: 8 }).withMessage('La Contraseña debe tener por lo menos 8 caracteres'),
 
 ], usersController.store);
 
@@ -38,7 +38,11 @@ router.post('/register', upload.single('avatar'),[
 router.get('/login', usersController.login);
 
 /* POST - Login. */
-// router.post('/login', usersController.processLogin);
+router.post('/login', 
+[
+	check('email').isEmail().withMessage('Debe ingresar un Email valido'),
+    check('password').isLength({ min: 8 }).withMessage('La Contraseña debe tener por lo menos 8 caracteres'),
+], usersController.processLogin);
 
 /* GET - Contact. */
 router.get('/contact', usersController.contact);

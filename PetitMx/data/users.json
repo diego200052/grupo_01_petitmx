@@ -169,5 +169,14 @@
     "contrasenia": "$2a$10$T1O0sXSUxBegIay4Vilsyuhjc0lYkzETZQk1qflKyFywCZRnGvzX6",
     "avatar": "user_avatar_1628472751044.PNG",
     "tipo": 0
+  },
+  {
+    "id": 20,
+    "nombre": "Diego",
+    "apellido": "Medina",
+    "correo": "diego@hotmail.com",
+    "contrasenia": "$2a$10$rZ0sF/MIN4Q58U2RovFh..SziG15.UYdse0JRZsM.38OK.xp.Kv1m",
+    "avatar": "user_avatar_1629419640427.jpg",
+    "tipo": 0
   }
 ]

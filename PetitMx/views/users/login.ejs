@@ -9,14 +9,20 @@
       <div class="container">
         <div class="row">
 
-          <form action="/home" method="GET">
+          <% if (locals.errors) { %>
+            <% errors.forEach( (error) => { %>
+              <h4 class="error">Error: <%= error.msg %></h4>
+            <% }); %>
+          <% } %>
+
+          <form action="/users/login" method="POST">
             <h2 class="title center-align brown-text">Iniciar Sesión</h2>
             <hr>
             <div class="card-sign-up hoverable">
 
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" id="username" name="username" placeholder="Usuario" required  minlength="4" maxlength="8">
+                <input type="text" id="email" name="email" placeholder="Email" required>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
@@ -26,7 +32,7 @@
               <div>
                 <p>
                   <label>
-                    <input type="checkbox" class="filled-in"  />
+                    <input type="checkbox" name="rememberMe" class="filled-in"  />
                     <span>Recordar mis datos</span>
                   </label>
                 </p>

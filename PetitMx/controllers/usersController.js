@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 // Constants
 const userFilePath  =path.join(__dirname, '/../data/users.json');
@@ -10,6 +11,41 @@ const controlador = {
     login: (req, res) => {
         res.render('users/login');
     },
+	processLogin: (req, res) => {
+		let errors = validationResult(req);
+
+		/* Validación de errores en el formulario */
+        if(errors.isEmpty())
+		{
+			let user = users.find(user => user.correo == req.body.email);
+			console.log(user);
+			/* Verificación si el usuario existe en la base de datos (json) */
+			if(user != undefined)
+			{
+				/* Validación de la contraseña */
+				if (bcrypt.compareSync(req.body.password, user.contrasenia))
+				{
+					// Se guarda el usuario en un session
+					req.session.user = user;
+					// Cookie para recordar al usuario
+					if (req.body.rememberMe)
+						res.cookie('userID', user.id, { maxAge: 60000 * 60 });
+					res.redirect('/');
+				}
+				else {
+					/* Contraseña incorrecta */
+					res.render("users/login", { errors: [{msg:"Contraseña incorrecta."}] } );
+				}
+			}
+			else {
+				/* Usuario no existe */
+				res.render("users/login", { errors: [{msg:"El usuario ingresado no existe."}] } );
+			}
+		}
+		else {
+			return res.render('users/login', { errors: errors.array() });
+		}
+	},
     register: (req, res) => {
         res.render('users/register');
     },
@@ -37,7 +73,8 @@ const controlador = {
 				
 		users.push(usuario);
 		fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2));
-		res.redirect('/users/register');
+		users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+		res.redirect('/');
 	},
     contact: (req, res) => {
         res.render('users/contact');
