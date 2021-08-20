@@ -16,7 +16,19 @@ const loginCookie = async (req, res, next) => {
             req.session.user = user;
         else
             /* Eliminamos la cookie */
-            res.cookie(userID, '', {expires: new Date(0)});
+            res.cookie('userID', '', {expires: new Date(0)});
+    }
+    /* Guardar datos escenciales del usuario en variables globales */
+    if(req.session.user) {
+        res.locals.nombreU = req.session.user.nombre;   
+        res.locals.apellidoU = req.session.user.apellido;
+        res.locals.correoU = req.session.user.correo;
+    }
+    /* Si no está logeado son indefinidas */
+    else {
+        res.locals.nombreU = undefined;   
+        res.locals.apellidoU = undefined;
+        res.locals.correoU = undefined;
     }
     next();
 }

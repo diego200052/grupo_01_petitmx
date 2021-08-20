@@ -32,9 +32,16 @@
                 </a>   
               </div>
               <div class="col offset-m1">
-                <a href="/users/login">
-                  <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
-                </a>
+                <% if (locals.nombreU === undefined) { %>
+                  <a href="/users/login">
+                    <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
+                  </a>
+                <% } %>
+                <% if (locals.nombreU !== undefined) { %>
+                  <a href="/users/logout">
+                    <span class="boton-navbar">Salir <i class="fas fa-sign-in-alt icon-padding"></i></span>   
+                  </a>
+                <% } %>
               </div>
             </div>
           </div>

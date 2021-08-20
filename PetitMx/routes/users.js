@@ -4,7 +4,7 @@ const multer = require('multer');
 const path = require('path');
 let { check, validationResult, body } = require('express-validator');
 
-
+const isLoggedIn = require('../middlewares/isLoggedIn');
 
 //para guardar los datos en users.json***
 const storageDisk = multer.diskStorage({
@@ -45,7 +45,9 @@ router.post('/login',
 ], usersController.processLogin);
 
 /* GET - Contact. */
-router.get('/contact', usersController.contact);
+router.get('/contact', isLoggedIn , usersController.contact);
+
+router.get('/logout', isLoggedIn, usersController.logout);
 
 
 

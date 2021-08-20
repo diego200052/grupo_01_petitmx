@@ -46,6 +46,11 @@ const controlador = {
 			return res.render('users/login', { errors: errors.array() });
 		}
 	},
+	logout: (req, res) => {
+		res.cookie('userID', '', {expires: new Date(0)});
+		req.session.user = undefined;
+		res.redirect('/');
+	},
     register: (req, res) => {
         res.render('users/register');
     },
@@ -85,7 +90,7 @@ const controlador = {
 		}
 	},
     contact: (req, res) => {
-        res.render('users/contact');
+        res.render('users/contact', {user: req.session.user});
     }
 };
 
