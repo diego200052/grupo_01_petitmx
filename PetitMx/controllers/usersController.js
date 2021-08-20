@@ -57,7 +57,11 @@ const controlador = {
 		  error.httpStatusCode = 404;
 		  return next(error);
 		}
+			let errors = validationResult(req);
 
+		/* Validación de errores en el formulario */
+		if(errors.isEmpty())
+		{
 			let passwordHash = bcrypt.hashSync(req.body.password, 10);	
 			// Cómo se van a registrar los administradores???. 
 			// Por default le dejo 0 - Cliente
@@ -71,10 +75,14 @@ const controlador = {
 				tipo: 0
 			};
 				
-		users.push(usuario);
-		fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2));
-		users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-		res.redirect('/');
+			users.push(usuario);
+			fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2));
+			users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+			res.redirect('/');
+		}
+		else {
+			return res.render('users/register', { errors: errors.array() });
+		}
 	},
     contact: (req, res) => {
         res.render('users/contact');

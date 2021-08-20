@@ -7,6 +7,8 @@ const adminRoutes = require('./routes/admin')
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
 
+const loginCookie = require('./middlewares/loginCookie');
+
 // ************ express() - (don't touch) ************
 const app = express();
 
@@ -24,6 +26,7 @@ app.use( session({
     resave: false,
     saveUninitialized: false,
   }) );
+app.use(loginCookie);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
@@ -44,4 +47,4 @@ app.use('/admin', adminRoutes);
 app.use((req, res, next) => {
     // render the error page
     res.status(404).render("not-found");
-})
+});
