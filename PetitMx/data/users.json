@@ -6,7 +6,7 @@
     "correo": "fbarok0@upenn.edu",
     "contrasenia": "wSLt4RAU",
     "avatar": "/amet/eleifend/pede/libero/quis.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "correo": "rfeldharker1@weather.com",
     "contrasenia": "MEe4k4Z",
     "avatar": "/erat/curabitur/gravida/nisi/at/nibh.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "correo": "gtzarkov2@webmd.com",
     "contrasenia": "LtHlpNy",
     "avatar": "/sem/sed/sagittis/nam/congue/risus.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "correo": "shaster3@reddit.com",
     "contrasenia": "oyuU1VHounui",
     "avatar": "/volutpat/quam/pede.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "correo": "achilvers4@cdbaby.com",
     "contrasenia": "L0W6EB7dMT3",
     "avatar": "/nulla.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "correo": "erevens5@ifeng.com",
     "contrasenia": "Bp9F9E",
     "avatar": "/lacus/purus/aliquet.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "correo": "khughf6@pbs.org",
     "contrasenia": "32Qph97f",
     "avatar": "/sollicitudin/vitae/consectetuer.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "correo": "lperton7@nps.gov",
     "contrasenia": "9W5caHqrW",
     "avatar": "/id/consequat/in/consequat/ut/nulla/sed.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "correo": "apaolucci8@lycos.com",
     "contrasenia": "gE8kBXi",
     "avatar": "/pellentesque/ultrices.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "correo": "gkamall9@samsung.com",
     "contrasenia": "dcMFDziX3oq",
     "avatar": "/mi/sit/amet.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "correo": "thaskaynea@nih.gov",
     "contrasenia": "F4AxumnsQXZY",
     "avatar": "/lorem/id/ligula/suspendisse/ornare/consequat.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "correo": "jmcreynoldb@parallels.com",
     "contrasenia": "qvN0CfeyPQuG",
     "avatar": "/eget/eros/elementum/pellentesque/quisque/porta/volutpat.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "correo": "csiemonsc@wufoo.com",
     "contrasenia": "vKdUH3bIIE",
     "avatar": "/sed.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "correo": "swilldend@oaic.gov.au",
     "contrasenia": "Owkae82",
     "avatar": "/ornare/imperdiet/sapien.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "correo": "kbinehame@wiley.com",
     "contrasenia": "YeDAxH3p",
     "avatar": "/orci/luctus/et/ultrices/posuere/cubilia.png",
-    "tipo": 1
+    "rol": 1
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "correo": "diego@mail.com",
     "contrasenia": "Hyo9loaq123",
     "avatar": "user_avatar_1628466904400.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "correo": "vicente@mail.com",
     "contrasenia": "vfi8cde3nht5e3",
     "avatar": "user_avatar_1628467593198.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 18,
@@ -159,7 +159,7 @@
     "correo": "vicente@mail.com",
     "contrasenia": "Vfi8cde3nht5e3",
     "avatar": "user_avatar_1628467699180.png",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "correo": "meli@mail.com",
     "contrasenia": "$2a$10$T1O0sXSUxBegIay4Vilsyuhjc0lYkzETZQk1qflKyFywCZRnGvzX6",
     "avatar": "user_avatar_1628472751044.PNG",
-    "tipo": 0
+    "rol": 0
   },
   {
     "id": 20,
@@ -177,6 +177,6 @@
     "correo": "diego@hotmail.com",
     "contrasenia": "$2a$10$rZ0sF/MIN4Q58U2RovFh..SziG15.UYdse0JRZsM.38OK.xp.Kv1m",
     "avatar": "user_avatar_1629419640427.jpg",
-    "tipo": 0
+    "rol": 0
   }
 ]

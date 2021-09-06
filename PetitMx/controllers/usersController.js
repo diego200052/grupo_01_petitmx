@@ -77,7 +77,7 @@ const controlador = {
 				correo: req.body.email,
 				contrasenia: passwordHash,
 				avatar: file.filename,
-				tipo: 0
+				rol: 0
 			};
 				
 			users.push(usuario);
