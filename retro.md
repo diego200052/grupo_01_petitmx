@@ -82,3 +82,28 @@
 
 5. Dejar de hacer.
 * Aplazar las actividades.
+
+# Retrospectiva del Sprint 5
+![image](https://gustavoveliz.files.wordpress.com/2009/05/startechnique1.gif?w=338&h=305)
+
+1. Comenzar a hacer. 
+* Organizarse individualmente para la entrega puntual de las actividades asignadas.
+* Tener definido bien un tiempo para reunirnos y mostrar avances y dudas con el equipo.
+
+2. Hacer más.
+* Subir algún avance aunque sea lo mínimo.
+* Reunirse para mostrar los avances.
+* Tener más comunicación para avanzar al proyecto.
+
+3. Continuar haciendo.
+* Emplear metodologías ágiles para la organización de las actividades.
+* Mantener las buenas prácticas en el desarrollo del código.
+* Seguir en la lucha para terminar el proyecto.
+
+4. Hacer menos.
+* Evitar retrasos en las entregas de las actividades asociadas al sprint.
+* Entregar las tareas en el último día de vencimiento.
+
+5. Dejar de hacer.
+* Aplazar las actividades.
+* Estresarse por no entregar a tiempo las actividades.
