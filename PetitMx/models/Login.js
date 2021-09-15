@@ -30,7 +30,16 @@ module.exports = (sequelize, dataTypes) => {
     const Login = sequelize.define(alias,cols,config);
 
     Login.associate = function (models) {
-        // En proceso...
+        
+        // El login/acceso pertenece a un usuario
+        // y el usuario tiene un login asociado.
+        
+        Login.hasOne(models.User,{
+            as:"users", // El nombre del modelo pero en plural
+            foreignKey: "login_id"
+        })
+
+    
     }
 
     return Login

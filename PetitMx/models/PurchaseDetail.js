@@ -53,7 +53,12 @@ module.exports = (sequelize, dataTypes) => {
     const PurchaseDetail = sequelize.define(alias,cols,config);
 
     PurchaseDetail.associate = function (models) {
-        // En proceso...
+        
+        PurchaseDetail.belongsTo(models.Purchase, {
+            as: "purchases",
+            foreignKey: "order_id",
+            oneDelete: 'cascade'
+        });
     }
 
     return PurchaseDetail;

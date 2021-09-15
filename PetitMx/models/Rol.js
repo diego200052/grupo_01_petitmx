@@ -25,7 +25,14 @@ module.exports = (sequelize, dataTypes) => {
     const Rol = sequelize.define(alias,cols,config);
 
     Rol.associate = function (models) {
-        // En proceso...
+        // El rol pertenece a un usuario
+        // y el usuario tiene un rol asociado.
+        
+        Rol.hasOne(models.User,{
+            as:"users", // El nombre del modelo pero en plural
+            foreignKey: "rol_id"
+        })
+
     }
 
     return Rol

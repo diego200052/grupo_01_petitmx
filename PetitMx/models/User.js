@@ -45,8 +45,34 @@ module.exports = (sequelize, dataTypes) => {
     const User = sequelize.define(alias,cols,config);
 
     User.associate = function (models) {
-        // En proceso...
-    }
+        // El login/acceso pertenece a un usuario
+        // y el usuario tiene un login asociado.
+        User.belongsTo(models.Login, {
+            as: "logins",
+            foreignKey: "login_id",
+            oneDelete: 'cascade'
+        });
+
+        // El rol pertenece a un usuario
+        // y el usuario tiene un rol asociado.
+        User.belongsTo(models.Rol, {
+            as: "rols",
+            foreignKey: "rol_id",
+            oneDelete: 'cascade'
+        });
+
+        User.hasMany(models.Purchase, {
+            as: "purchases",
+            foreignKey: "user_id"
+        });
+
+        User.hasMany(models.Cart, {
+            as: "carts",
+            foreignKey: "user_id"
+        });
+
+
+    };
 
     return User
 };

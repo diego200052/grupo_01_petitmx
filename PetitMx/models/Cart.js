@@ -33,7 +33,12 @@ module.exports = (sequelize, dataTypes) => {
     const Cart = sequelize.define(alias,cols,config);
 
     Cart.associate = function (models) {
-        // En proceso...
+        
+        Cart.belongsTo(models.User, {
+            as: "users",
+            foreignKey: "user_id",
+            oneDelete: 'cascade'
+        });
     }
 
     return Cart;
