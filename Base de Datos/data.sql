@@ -208,13 +208,28 @@ INSERT INTO products_color (color_id, product_id, quantity) VALUES
 -- SELECT * FROM products_color;
 
 -- Tabla de 'cart'
-INSERT INTO cart (id_cart, quantity, createdAt, updatedAt, product_id, user_id) VALUES
-(1, 2, NULL, NULL, 3, 1),
-(2, 1, NULL, NULL, 4, 2),
-(3, 1, NULL, NULL, 1, 3),
-(4, 4, NULL, NULL, 7, 4),
-(5, 1, NULL, NULL, 8, 5),
-(6, 1, NULL, NULL, 2, 6),
-(7, 8, NULL, NULL, 4, 7);
+INSERT INTO cart (id_cart, createdAt, updatedAt, product_id, user_id) VALUES
+(1, NULL, NULL, 3, 1),
+(2, NULL, NULL, 4, 2),
+(3, NULL, NULL, 1, 3),
+(4, NULL, NULL, 7, 4),
+(5, NULL, NULL, 8, 5),
+(6, NULL, NULL, 2, 6),
+(7, NULL, NULL, 4, 7);
 
 -- SELECT * FROM cart;
+
+-- Tabla de 'cart'
+INSERT INTO products_cart (cart_id, product_id, quantity) VALUES
+(1, 1, 3),
+(1, 2, 3),
+(1, 3, 3),
+(2, 1, 3),
+(2, 2, 3),
+(3, 18, 3),
+(3, 14, 3),
+(3, 1, 3),
+(4, 10, 3),
+(5, 6, 3);
+
+-- SELECT * FROM products_cart;

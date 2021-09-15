@@ -62,7 +62,7 @@ CREATE TABLE purchase(
 	id_order 		INT(10)			UNSIGNED	AUTO_INCREMENT,
     details			VARCHAR(50)		NULL,
     statusDetail	VARCHAR(20)		NOT NULL,
-    comments		VARCHAR(100)	NOT NULL,
+    comments		VARCHAR(100)	NULL,
     createdAt		TIMESTAMP		NOT NULL 	DEFAULT CURRENT_TIMESTAMP,
     updatedAt		TIMESTAMP		NOT NULL 	DEFAULT CURRENT_TIMESTAMP,
     user_id			INT(10)		UNSIGNED	NOT NULL,
@@ -184,14 +184,24 @@ CREATE TABLE products_color(
 
 CREATE TABLE cart(
 	id_cart		INT(10)		UNSIGNED	AUTO_INCREMENT,
-    quantity	SMALLINT	UNSIGNED	NOT NULL,
     createdAt	TIMESTAMP	NULL,
     updatedAt	TIMESTAMP	NULL,
     product_id	INT(10)		UNSIGNED	NOT NULL,
     user_id		INT(10)		UNSIGNED	NOT NULL,
     PRIMARY KEY(id_cart),
-    FOREIGN KEY fk_cart_products (product_id) REFERENCES products(id_product)
-	ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY fk_cart_user (user_id) REFERENCES user(id_user)
+	ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Tabla de 'products_cart'
+
+CREATE TABLE products_cart(
+	cart_id			INT(10)		UNSIGNED,
+    product_id		INT(10)		UNSIGNED,
+    quantity		SMALLINT	UNSIGNED	NOT NULL,
+    PRIMARY KEY (cart_id, product_id),
+    FOREIGN KEY fk_products_cart (cart_id) REFERENCES cart(id_cart)
+	ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY fk_products_product (product_id) REFERENCES products(id_product)
 	ON DELETE CASCADE ON UPDATE CASCADE
 );
