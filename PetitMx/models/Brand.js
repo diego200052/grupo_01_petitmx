@@ -25,7 +25,11 @@ module.exports = (sequelize, dataTypes) => {
     const Brand = sequelize.define(alias,cols,config);
 
     Brand.associate = function (models) {
-        // En proceso...
+        
+        Brand.hasOne(models.Product,{
+            as:"products", // El nombre del modelo pero en plural
+            foreignKey: "brand_id"
+        })
     }
 
     return Brand;

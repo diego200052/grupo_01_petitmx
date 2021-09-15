@@ -39,6 +39,21 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "user_id",
             oneDelete: 'cascade'
         });
+
+        Cart.belongsToMany(models.Product, { 
+            as: "products",
+            through: 'products_cart',
+            foreignKey: 'product_id',
+            foreignKeyConstraint: true,
+            otherKey: 'cart_id',
+            timestamps: false,
+            onDelete: 'cascade'
+        });
+
+        Cart.hasMany(models.ProductCart, {
+            as: "productscarts",
+            foreignKey: "cart_id"
+        });
     }
 
     return Cart;

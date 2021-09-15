@@ -25,7 +25,13 @@ module.exports = (sequelize, dataTypes) => {
     const Pet = sequelize.define(alias,cols,config);
 
     Pet.associate = function (models) {
-        // En proceso...
+        
+        Pet.hasOne(models.Product,{
+            as:"products", // El nombre del modelo pero en plural
+            foreignKey: "pet_id"
+        })
+
+
     }
 
     return Pet;

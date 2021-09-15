@@ -1,17 +1,17 @@
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = 'ProductColor'; // esto debería estar en singular
+    let alias = 'ProductCart'; // esto debería estar en singular
     
     let cols = {
-        color_id: {
-            type: dataTypes.INT(4).UNSIGNED,
+        cart_id: {
+            type: dataTypes.INT(10).UNSIGNED,
             primaryKey: true,
             allowNull:false,
         },
         product_id:{
             type: dataTypes.INT(10).UNSIGNED,
             primaryKey: true,
-            allowNull:false
+            allowNull:false,
         },
         quantity:{
             type: dataTypes.SMALLINT.UNSIGNED,
@@ -21,27 +21,27 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         timestamps: false,
-        createdAt: false,
+        createdAt:  false,
         updatedAt: false,
         deletedAt: false
     }
 
-    const ProductColor = sequelize.define(alias,cols,config);
+    const ProductCart = sequelize.define(alias,cols,config);
 
-    ProductColor.associate = function (models) {
+    ProductCart.associate = function (models) {
         
-        ProductColor.belongsTo(models.Product, {
+        ProductCart.belongsTo(models.Product, {
             as: "products",
             foreignKey: "product_id",
             oneDelete: 'cascade'
         });
 
-        ProductColor.belongsTo(models.Color, {
-            as: "colors",
-            foreignKey: "color_id",
+        ProductCart.belongsTo(models.Cart, {
+            as: "carts",
+            foreignKey: "cart_id",
             oneDelete: 'cascade'
         });
     }
 
-    return ProductColor;
+    return ProductCart;
 };
