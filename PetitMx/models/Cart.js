@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     
     let cols = {
         id_cart: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
             autoIncrement:true
@@ -14,11 +14,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false,
         },
         product_id:{
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         },  
         user_id:{
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         }
     };
@@ -27,7 +27,8 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true,
         createdAt: 'createdAt',
         updatedAt: 'updatedAt',
-        deletedAt: false
+        deletedAt: false,
+        freezeTableName: true
     }
 
     const Cart = sequelize.define(alias,cols,config);

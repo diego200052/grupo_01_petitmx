@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     
     let cols = {
         id_pet: {
-            type: dataTypes.INT(4).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
             autoIncrement:true

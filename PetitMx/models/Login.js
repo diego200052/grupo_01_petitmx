@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     
     let cols = {
         id_login: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
             autoIncrement:true
@@ -24,7 +24,8 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false,
         createdAt: false,
         updatedAt: false,
-        deletedAt: false
+        deletedAt: false,
+        freezeTableName: true
     }
 
     const Login = sequelize.define(alias,cols,config);

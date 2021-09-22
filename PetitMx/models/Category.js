@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     
     let cols = {
         id_category: {
-            type: dataTypes.INT(4).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
             autoIncrement:true
@@ -19,7 +19,8 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true,
         createdAt: 'createdAt',
         updatedAt: 'updatedAt',
-        deletedAt: false
+        deletedAt: false,
+        freezeTableName: true
     }
 
     const Category = sequelize.define(alias,cols,config);

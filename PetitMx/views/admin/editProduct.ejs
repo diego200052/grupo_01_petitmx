@@ -9,32 +9,32 @@
       <div class="container">
         <div class="row">
 
-          <form class="col s12" action="/admin/editProduct/<%= producto.id %>" method="POST" onsubmit="return alert('¡Producto editado con éxito!');" enctype="multipart/form-data">
-            <h2 class="title center-align brown-text">Editando producto: <%= producto.nombre %></h2>
+          <form class="col s12" action="/admin/editProduct/<%= producto.id_product %>" method="POST" onsubmit="return alert('¡Producto editado con éxito!');" enctype="multipart/form-data">
+            <h2 class="title center-align brown-text">Editando producto: <%= producto.productName %></h2>
             <hr>
             <div class="card-sign-up hoverable">
 
               <div class="input-field">
-                <input type="text" id="productName" name="productName" placeholder="Nombre del producto" value="<%= producto.nombre %>" required >
+                <input type="text" id="productName" name="productName" placeholder="Nombre del producto" value="<%= producto.productName %>" required >
               </div>
 
               <div class="row">
                 <div class="input-field col l6 s12">
-                  <input type="text" id="brand" name="brand" placeholder="Marca del producto" required value="<%= producto.marca %>">
+                  <input type="text" id="brand" name="brand" placeholder="Marca del producto" required value="<%= producto.brand.brandName %>">
                 </div>
                 <div class="input-field col l6 s12">
-                  <input type="text" id="price" name="price" placeholder="Precio del producto" required value="<%= producto.precio %>">
+                  <input type="text" id="price" name="price" placeholder="Precio del producto" required value="<%= producto.price %>">
                 </div>
               </div>
               
               <div class="input-field">
-                <textarea id="description" name="description" class="materialize-textarea" placeholder="Descripción"><%= producto.descripcion %></textarea>
+                <textarea id="description" name="description" class="materialize-textarea" placeholder="Descripción"><%= producto.description %></textarea>
               </div>
               <div class="input-field">
-                <textarea id="features" name="features" class="materialize-textarea" placeholder="Caracteristicas"><%= producto.caracteristicas %></textarea>
+                <textarea id="features" name="features" class="materialize-textarea" placeholder="Ingredientes"><%= producto.ingredients %></textarea>
               </div>
               <div class="input-field">
-                <textarea id="instructions" name="instructions" class="materialize-textarea" placeholder="Instrucciones"><%= producto.instrucciones %></textarea>
+                <textarea id="instructions" name="instructions" class="materialize-textarea" placeholder="Instrucciones"><%= producto.instructions %></textarea>
               </div>
               <label for="image"><i class="fas fa-file-image"></i> Subir una imagen: </label>
               <div class="input-field">
@@ -43,19 +43,13 @@
               <div class="input-field col s12">
                 <select name="category" id="category">
                   <option value="" disabled selected>Selecciona una categoría</option>
-                  <% if(producto.category == 'Perros') { %>
-                    <option value="Perros" selected>Perros</option>
-                    <option value="Gatos">Gatos</option>
-                    <option value="Peces">Peces</option>
-                  <% } else if(producto.category == 'Gatos') { %>
-                    <option value="Perros">Perros</option>
-                    <option value="Gatos" selected>Gatos</option>
-                    <option value="Peces">Peces</option>
-                  <% } else { %>
-                    <option value="Perros">Perros</option>
-                    <option value="Gatos">Gatos</option>
-                    <option value="Peces" selected>Peces</option>
-                  <% } %>
+                  <% pets.forEach( pet => { %>
+                    <option value="<%= pet.pet %>"
+                      <% if (producto.pets.pet === pet.pet) { %>
+                        selected
+                      <% } %>
+                    ><%= pet.pet%></option>
+                  <% }); %>
                 </select>
                 <label for="category">Categoría del producto: </label>
               </div>

@@ -128,8 +128,8 @@ INSERT INTO color (id_color, colorName, createdAt, updatedAt) VALUES
 
 -- SELECT * FROM color;
 
--- Tabla de 'brand'
-INSERT INTO brand (id_brand, brandName, createdAt, updatedAt) VALUES
+-- Tabla de 'brands'
+INSERT INTO brands (id_brand, brandName, createdAt, updatedAt) VALUES
 (NULL, 'Aquadent', NULL, NULL),
 (NULL, 'Bark', NULL, NULL),
 (NULL, 'Cat Snack', NULL, NULL),
@@ -151,7 +151,7 @@ INSERT INTO brand (id_brand, brandName, createdAt, updatedAt) VALUES
 (NULL, 'Leaps & Bounds ', NULL, NULL),
 (NULL, 'Cunipic ', NULL, NULL);
 
--- SELECT * FROM brand;
+-- SELECT * FROM brands;
 
 -- Tabla de 'pets'
 INSERT INTO pets (id_pet, pet, createdAt, updatedAt) VALUES

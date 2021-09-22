@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     
     let cols = {
         id_user: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
             autoIncrement:true
@@ -26,11 +26,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false,
         }, 
         rol_id:{
-            type: dataTypes.INT(4).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         }, 
         login_id:{
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         }
     };
@@ -39,7 +39,8 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: true,
         createdAt: 'createdAt',
         updatedAt: 'updatedAt',
-        deletedAt: false
+        deletedAt: false,
+        freezeTableName: true
     }
 
     const User = sequelize.define(alias,cols,config);

@@ -1,16 +1,24 @@
 const fs = require('fs');
 const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const db = require('../models');
+const sequelize = db.sequelize;
 
 const controlador = {
     editProduct: (req, res) => {
-		const producto = products.find( (producto) => {
-			return producto.id == req.params.id;
-		});
-        res.render('admin/editProduct', { producto:producto });
+		let producto = db.Product.findByPk(req.params.id, {
+            include: ['brand', 'subcategorys', 'pets']
+        });
+		let pets = db.Pet.findAll();
+
+		Promise.all([producto, pets])
+		.then(function([producto, pets]) {
+			if(producto) {
+				console.log(pets);
+				res.render('admin/editProduct', { producto, pets });
+			}
+            else
+                res.status(404).render("not-found");
+        });
     },
 
 	// Update - Method to update

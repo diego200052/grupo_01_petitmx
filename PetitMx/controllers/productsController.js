@@ -1,22 +1,26 @@
 const fs = require('fs');
 const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../models');
+const sequelize = db.sequelize;
 
 const controlador = {
     products: (req, res) => {
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('products/products', {products: products});
+        db.Product.findAll()
+        .then( products => {
+            res.render('products/products', {products: products});
+        });
     },
     productCart: (req, res) => {
         res.render('products/productCart');
     },
     productDetail: (req, res) => {
-        const producto = products.find( (producto) => {
-			return producto.id == req.params.id;
-		});
-        res.render('products/productDetail', {producto: producto});
+        db.Product.findByPk(req.params.id)
+        .then( producto => {
+            if(producto)
+                res.render('products/productDetail', {producto: producto});
+            else
+                res.status(404).render("not-found");
+        });       
     }
 };
 

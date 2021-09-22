@@ -1,10 +1,10 @@
 module.exports = (sequelize, dataTypes) => {
     
-    let alias = 'Brand'; // esto debería estar en singular
+    let alias = 'Brands'; // esto debería estar en singular
     
     let cols = {
         id_brand: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
             autoIncrement:true

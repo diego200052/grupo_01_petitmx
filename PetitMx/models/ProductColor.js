@@ -4,12 +4,12 @@ module.exports = (sequelize, dataTypes) => {
     
     let cols = {
         color_id: {
-            type: dataTypes.INT(4).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
         },
         product_id:{
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false
         },
@@ -23,7 +23,8 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false,
         createdAt: false,
         updatedAt: false,
-        deletedAt: false
+        deletedAt: false,
+        freezeTableName: true
     }
 
     const ProductColor = sequelize.define(alias,cols,config);

@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     
     let cols = {
         id_product: {
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             allowNull:false,
             autoIncrement:true
@@ -34,15 +34,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull:false,
         }, 
         subcategory_id:{
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         },
         brand_id:{
-            type: dataTypes.INT(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         },
         pet_id:{
-            type: dataTypes.INT(4).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         }
     };
@@ -78,8 +78,8 @@ module.exports = (sequelize, dataTypes) => {
             oneDelete: 'cascade'
         });
 
-        Product.belongsTo(models.Brand, {
-            as: "brands",
+        Product.belongsTo(models.Brands, {
+            as: "brand",
             foreignKey: "brand_id",
             oneDelete: 'cascade'
         });

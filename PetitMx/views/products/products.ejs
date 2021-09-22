@@ -83,18 +83,18 @@
                     <div class="col s12 m6 l4">
                         <div class="card">
                         <div class="card-image">
-                            <img class="activator img-product" src="img/productos/<%= producto.imagen %>">
+                            <img class="activator img-product" src="img/productos/<%= producto.image %>">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator titulo-producto"><%= producto.nombre %></span>
-                            <h5>$<%= producto.precio %></h5>
+                            <span class="card-title activator titulo-producto"><%= producto.productName %></span>
+                            <h5>$<%= producto.price %></h5>
                         </div>
                         <div class="card-action">
-                            <a href="/products/productDetail/<%= producto.id %>" class="btn white pink-text waves-effect waves-yellow">VER MÁS</a>
+                            <a href="/products/productDetail/<%= producto.id_product %>" class="btn white pink-text waves-effect waves-yellow">VER MÁS</a>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Descripción<i class="material-icons right">close</i></span>
-                            <p class="text-descripcion"><%= producto.descripcion %></p>
+                            <p class="text-descripcion"><%= producto.description %></p>
                         </div>
                         </div>
                     </div>

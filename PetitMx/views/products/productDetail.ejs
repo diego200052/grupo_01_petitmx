@@ -9,15 +9,15 @@
       <section>
         <div class="flex-container tarjeta-superior-producto">
           <div class="contenedor-imagen">
-            <img class="imagen-producto" src="/img/productos/<%= producto.imagen %>"></img>
+            <img class="imagen-producto" src="/img/productos/<%= producto.image %>"></img>
           </div>  
           <div class="tproducto">
-            <h3><%= producto.nombre %></h3>
+            <h3><%= producto.productName %></h3>
             <hr>
-            <p class="precio-producto"><b>$<%= producto.precio %></b></p>
+            <p class="precio-producto"><b>$<%= producto.price %></b></p>
             <h4>Descripción</h4>
             <div class="descripcion-producto">
-              <p><%= producto.descripcion %></p>
+              <p><%= producto.description %></p>
             </div>
             <div class="quantity">
               
@@ -33,11 +33,11 @@
 
               <br><br>
 
-              <a href="/admin/editProduct/<%= producto.id %>" class="waves-effect waves-orange btn agregar-carrito-button" type="submit" value="Agregar al carrito">
+              <a href="/admin/editProduct/<%= producto.id_product %>" class="waves-effect waves-orange btn agregar-carrito-button" type="submit" value="Agregar al carrito">
                 Editar producto
               </a>
 
-              <form onsubmit="return confirm('¿Deseas eliminar el producto?');" action="/admin/deleteProduct/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+              <form onsubmit="return confirm('¿Deseas eliminar el producto?');" action="/admin/deleteProduct/<%= producto.id_product %>?_method=DELETE" method="POST" style="display: inline-flex">
                 <button type="submit" class="waves-effect waves-red btn agregar-carrito-button">ELIMINAR</button>
               </form>
 
@@ -48,16 +48,20 @@
       <section>
         <div class="flex-container tarjeta-inferior-producto">
           <div class="caracteristicas-tproducto">
-            <h4>Caracteristicas</h4>
-            <hr>
-            <ul>
-              <li><%= producto.caracteristicas %></li>
-            </ul>
-            <h4>Instrucciones de uso</h4>
-            <hr>
-            <ol>
-              <li><%= producto.instrucciones %></li>
-            </ol>
+            <% if (producto.ingredients) { %>
+              <h4>Ingredientes</h4>
+              <hr>
+              <ul>
+                <li><%= producto.ingredients %></li>
+              </ul>
+            <% } %>
+            <% if (producto.instructions) { %>
+              <h4>Instrucciones de uso</h4>
+              <hr>
+              <ol>
+                <li><%= producto.instructions %></li>
+              </ol>
+            <% } %>
           </div>
           <div class="promo-tproducto">
             <h4>Envios a todo México</h4>
