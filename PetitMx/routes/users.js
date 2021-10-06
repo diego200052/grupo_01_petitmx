@@ -49,6 +49,8 @@ router.get('/contact', isLoggedIn , usersController.contact);
 
 router.get('/logout', isLoggedIn, usersController.logout);
 
+router.get('/account', isLoggedIn, usersController.account);
+router.put('/account', isLoggedIn, upload.single('avatar'), usersController.updateAccount)
 
 
 

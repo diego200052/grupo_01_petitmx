@@ -11,7 +11,10 @@
     </div>
     <%- include('partials/header.ejs') %> 
     <main class="fondo-main">
-      <!-- Inicio de Slider -->
+      <% if (locals.nombreU) { %>
+        <h4 class="title center-align brown-text">¡Bienvenido de nuevo <%= locals.nombreU + " " + locals.apellidoU %>!</h4>
+      <% } %>
+        <!-- Inicio de Slider -->
       <div class="slider">
         <ul class="slides">
           <li>

@@ -4,8 +4,7 @@ const path = require('path');
 const userFilePath  =path.join(__dirname, '/../data/users.json');
 
 const isLoggedIn = async (req, res, next) => {
-    /* Si el usuario tiene la cookie con su ID y la sessión está definida,
-    se inicia sesión */
+    /* Si el usuario tiene la sesión definida, está logeado*/
     if (req.session.user) {
         next();
     }

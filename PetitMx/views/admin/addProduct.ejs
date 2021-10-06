@@ -9,43 +9,66 @@
       <div class="container">
         <div class="row">
 
-          <form class="col s12" action="/admin/addProduct" method="POST" onsubmit="return alert('¡Producto creado con éxito!');" enctype="multipart/form-data">
-            <h2 class="title center-align brown-text">Creación de producto</h2>
+          <form class="col s12" action="/admin/addProduct" method="POST" onsubmit="return alert('¡Producto editado con éxito!');" enctype="multipart/form-data">
+            <h2 class="title center-align brown-text">Agregando producto nuevo</h2>
             <hr>
             <div class="card-sign-up hoverable">
 
               <div class="input-field">
-                <input type="text" id="productName" name="productName" placeholder="Nombre del producto" required>
+                <label for="productName">Nombre del producto: </label>
+                <input type="text" id="productName" name="productName" placeholder="Nombre del producto" value="" required >
               </div>
 
               <div class="row">
                 <div class="input-field col l6 s12">
-                  <input type="text" id="brand" name="brand" placeholder="Marca del producto" required>
+                  <select name="brand" id="brand">
+                    <option value="" disabled selected>Selecciona una marca</option>
+                    <% brands.forEach( brand => { %>
+                      <option value="<%= brand.id_brand %>"
+                      ><%= brand.brandName%></option>
+                    <% }); %>
+                  </select>
+                  <label for="brand">Marca del producto: </label>
                 </div>
                 <div class="input-field col l6 s12">
-                  <input type="text" id="price" name="price" placeholder="Precio del producto" required>
+                  <label for="price">Precio del producto: </label>
+                  <input type="text" id="price" name="price" placeholder="Precio del producto" required value="">
                 </div>
               </div>
               
               <div class="input-field">
+                <label for="description">Descripción del producto: </label>
                 <textarea id="description" name="description" class="materialize-textarea" placeholder="Descripción"></textarea>
               </div>
               <div class="input-field">
-                <textarea id="features" name="features" class="materialize-textarea" placeholder="Caracteristicas"></textarea>
+                <label for="features">Ingredientes del producto: </label>
+                <textarea id="features" name="features" class="materialize-textarea" placeholder="Ingredientes"></textarea>
               </div>
               <div class="input-field">
+                <label for="instructions">Instrucciones del producto: </label>
                 <textarea id="instructions" name="instructions" class="materialize-textarea" placeholder="Instrucciones"></textarea>
               </div>
               <label for="image"><i class="fas fa-file-image"></i> Subir una imagen: </label>
               <div class="input-field">
                 <input type="file" id="image" name="image" accept="image/*">
               </div>
-              <div class="input-field col s12">
+              <div class="input-field col l6 s12">
+                <select name="pet" id="pet">
+                  <option value="" disabled selected>Selecciona el tipo de mascota</option>
+                  <% pets.forEach( pet => { %>
+                    <option value="<%= pet.id_pet %>"
+                    ><%= pet.pet%></option>
+                  <% }); %>
+                </select>
+                <label for="pet">Tipo de mascota: </label>
+              </div>
+              <div class="input-field col l6 s12">
                 <select name="category" id="category">
-                  <option value="" disabled selected>Selecciona una categoría</option>
-                  <option value="Perros">Perros</option>
-                  <option value="Gatos">Gatos</option>
-                  <option value="Peces">Peces</option>
+                  <option value="" disabled selected>Selecciona la categoría del producto</option>
+                  <% subcategorys.forEach( subcategory => { %>
+                    <option value="<%= subcategory.id_subcategory %>"
+                    ><%= subcategory.subcategoryName%></option>
+                  <% }); %>
                 </select>
                 <label for="category">Categoría del producto: </label>
               </div>

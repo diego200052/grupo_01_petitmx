@@ -15,8 +15,8 @@
           <div class="col s12 m6 l6 center-align">
             <div class="search_wrap search_wrap_3">
               <div class="search_box">
-                <form class="flex-container barra-busqueda" action="/" method="GET">
-                  <input type="text" class="input" placeholder="search...">
+                <form class="flex-container barra-busqueda" action="/products" method="GET">
+                  <input name="search" type="text" class="input" placeholder="search...">
                   <div class="btn btn_common">
                     <i class="fas fa-search"></i>
                   </div>
@@ -27,9 +27,17 @@
           <div class="col m6 offset-l1 l5 login-sign-up botones-navbar hide-on-small-only">
             <div class="row">
               <div class="col">
-                <a href="/users/register">
-                  <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
-                </a>   
+                <% if (locals.nombreU === undefined) { %>
+                  <a href="/users/register">
+                    <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
+                  </a> 
+                <% } else { %>
+                  <a href="/users/account">
+                      <span class="boton-navbar">Mi cuenta</span>
+                      <img src="/img/users/avatars/<%= locals.avatarU %>" width="30" height="30" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                    
+                  </a>
+                <% } %>
               </div>
               <div class="col offset-m1">
                 <% if (locals.nombreU === undefined) { %>
@@ -39,7 +47,7 @@
                 <% } %>
                 <% if (locals.nombreU !== undefined) { %>
                   <a href="/users/logout">
-                    <span class="boton-navbar">Salir <i class="fas fa-sign-in-alt icon-padding"></i></span>   
+                    <span class="boton-navbar">Cerrar sesión <i class="fas fa-sign-in-alt icon-padding"></i></span>   
                   </a>
                 <% } %>
               </div>

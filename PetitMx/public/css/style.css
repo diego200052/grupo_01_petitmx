@@ -601,6 +601,10 @@ hr{
   margin-top: 10px;
 }
 
+.barra-busqueda input {
+  color: white;
+}
+
 
 .burger-menu {
   background-color: var(--cafe);
@@ -742,6 +746,10 @@ hr{
  }
 
 .send-email{
+  background-color: var(--rosa) !important;
+}
+
+.search-product{
   background-color: var(--rosa) !important;
 }
 
