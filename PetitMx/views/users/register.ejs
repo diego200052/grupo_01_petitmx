@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
   <%- include('../partials/head.ejs') %>
+  
+  
   <body>
     <%- include('../partials/header.ejs') %> 
 
@@ -15,29 +17,29 @@
             <% }); %>
           <% } %>
           
-          <form action="/users/register" method="POST" enctype="multipart/form-data"  onsubmit="return alert('Usuario creado con éxito!');">     
+          <form class="register" action="/users/register" method="POST" enctype="multipart/form-data">     
               
               <div class="card-sign-up hoverable"> <!-- INICIO de bloque de registro -->
                 <div class="row">
                   <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
                     <input type="text" placeholder="Ej: Vicente" value="<%= locals.old && old.first_name %>" id="first_name" name="first_name" data-name="Nombre">
-                    <label for="first_name">Nombre: </label>
-                    <div class="invalid-feedback"> </div>
+                    <label for="first_name">Nombre</label>
+                    <span class="helper-text"></span>
                   </div>
                   <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
                     <input type="text" placeholder="Ej: Ruiz" value="<%= locals.old && old.last_name %>" id="last_name" name="last_name" data-name="Apellido">
                     <label for="last_name">Apellido: </label>
-                    <div class="invalid-feedback"> </div>
+                    <span class="helper-text"></span>
                   </div>
                 </div>         
                 <div class="row">
                   <div class="input-field">
                     <i class="material-icons prefix">email</i>
-                    <input type="email" id="email" name="email" value="<%= locals.old && old.email %>" placeholder="Ej: vicente@gmail.com" data-name="Email" required>
+                    <input type="email" id="email" name="email" value="<%= locals.old && old.email %>" placeholder="Ej: vicente@gmail.com" data-name="Email">
                     <label for="email">Correo: </label>
-                    <div class="invalid-feedback"> </div>
+                    <span class="helper-text"></span>
                   </div>
                 </div>   
                 <div class="row"> <!-- INICIO de contraseñas -->
@@ -45,35 +47,33 @@
                     <i class="material-icons prefix">lock</i>
                     <input type="password" id="password" name="password" placeholder="********"
                                 data-name="Contraseña"  
-                                minlength="8"
-                                pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
-                                title="La contraseña debe comenzar con una letra y contener al menos un dígito"
-                                required>
-                    <div class="invalid-feedback"> </div>
+                                title="La contraseña debe comenzar con una letra y contener al menos un dígito">
+                    <label for="email">Contraseña: </label>
+                    <span class="helper-text"></span>
                   </div>
                   <div class="input-field col s6">
                     <i class="material-icons prefix">lock_outline</i>
                     <input type="password" id="rePassword" name="rePassword"
-                          data-name="Repetir Contraseña"   
+                          data-name="ReContraseña"   
                           placeholder="********"
-                          minlength="8"
-                          pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
                           title="La contraseña debe comenzar con una letra y contener al menos un dígito"
-                          required>
-                    <div class="invalid-feedback" id="repasswordMessage"> </div>
+                          >
+                    <label for="email">Re-Contraseña: </label>
+                    <span class="helper-text"  id="repasswordMessage"></span>
                   </div>
                 </div>   <!-- FIN de row de contraseña-->
                 <div class="row"> <!-- INICIO de imagen de avatar -->
                   <div class="file-field input-field col s12">
-                    <div class="btn">
-                      <span>Subir imagen</span>
-                      <input type="file" id="avatar" name="avatar" accept="image/*">
+                    <div class="file-path-wrapper col s9 m9 l9">
+                      <input class="file-path" type="text" id="image-file"  name="image-file" data-name="Imagen">
+                      <label for="avatar-file">Avatar:</label>
+                      <span class="helper-text"></span>
                     </div>
-                    <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text">
+                    <div class="btn col s3 m3 l3">
+                      <span>Upload</span>
+                      <input type="file" id="avatar" name="avatar">
                     </div>
                   </div>
-                  <div class="invalid-feedback"> </div>
                 </div>               
                 <div > <!-- INICIO de terminos y condiciones -->
                   <p>
@@ -110,7 +110,8 @@
     <!-- JavaScript -->
 
     <%- include('../partials/scripts.ejs') %>
-	  <script defer src="/js/validateRegister.js"></script>
+    <script type="text/javascript" src="/js/validator.min.js"></script>
+	  <script type="text/javascript" src="/js/validateRegister.js"></script>
     
   </body>
 </html>
