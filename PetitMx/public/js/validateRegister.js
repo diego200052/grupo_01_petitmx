@@ -198,6 +198,6 @@ formRegister.addEventListener('submit', function (event) {
 		event.preventDefault();
 		alert('Hay campos vacíos o con errores. Por favor verifica.'); 
 	}else{
-		return alert('Usuario registrado!'); 
+		return alert('Te has registrado con exito!'); 
 	}
 })

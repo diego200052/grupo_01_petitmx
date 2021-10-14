@@ -97,7 +97,7 @@ const controlador = {
 					login_id: newLogin.id_login
 				})
 				.then(() => {
-					return res.redirect('/');
+					return res.redirect('login');
 				})
 				.catch(error => res.send(error));
 			})
