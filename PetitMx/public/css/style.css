@@ -634,6 +634,11 @@ hr{
 
 /* MAIN INDEX.HTML*/
 
+.avatar-mobile{
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
 .img-slider{
   margin-top: 0px;
 }

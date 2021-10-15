@@ -100,8 +100,26 @@
     <li><a href="#">Productos</a></li>
     <li><a href="/users/contact">Contacto</a></li>
     <li><div class="divider"></div></li>
-    <li><a href="/users/register"><i class="material-icons">person_add</i>Registrate</a></li>
-    <li><a href="/users//login"><i class="material-icons">forward</i>Login</a></li>
+    <li>
+        <% if (locals.nombreU === undefined) { %>
+          <a href="/users/register">
+            <i class="small material-icons">person_add</i><b>Registrate</b>
+          </a> 
+        <% } else { %>
+          <a href="/users/account">
+            <img class="avatar-mobile" src="/img/users/avatars/<%= locals.avatarU %>" width="30" height="30" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            <span class="boton-navbar"><b>Mi cuenta</b></span>          
+          </a>
+        <% } %>
+    </li>
+    <li>
+      <% if (locals.nombreU === undefined) { %>
+        <a href="/users/login"><i class="small material-icons">forward</i><b>Login</b></a></li>
+      <% } %>
+      <% if (locals.nombreU !== undefined) { %>
+        <a href="/users/logout"><i class="small material-icons">exit_to_app</i><b>Cerrar sesión</b></a></li>
+      <% } %>
+    </li>
   </ul>
 
    <!-- Estructura Dropdown para animales -->
