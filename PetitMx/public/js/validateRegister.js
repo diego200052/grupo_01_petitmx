@@ -198,6 +198,18 @@ formRegister.addEventListener('submit', function (event) {
 		event.preventDefault();
 		alert('Hay campos vacíos o con errores. Por favor verifica.'); 
 	}else{
-		return alert('Te has registrado con exito!'); 
+		event.preventDefault();
+
+		Swal.fire({
+			icon: 'success',
+			title: '¡Registrado con éxito!',
+			text: 'Ahora puedes iniciar sesión.',
+			showConfirmButton: true
+		  }).then( val => {
+			  if (val){
+				formRegister.submit();
+				return ;
+			  }
+		  })
 	}
 })

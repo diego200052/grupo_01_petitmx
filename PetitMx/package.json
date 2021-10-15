@@ -21,6 +21,7 @@
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0",
+    "sweetalert2": "^11.1.8",
     "validator": "^13.6.0"
   }
 }
