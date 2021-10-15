@@ -15,18 +15,22 @@
             <% }); %>
           <% } %>
 
-          <form action="/users/login" method="POST">
+          <form class="login" action="/users/login" method="POST">
             <h2 class="title center-align brown-text">Iniciar Sesión</h2>
             <hr>
             <div class="card-sign-up hoverable">
 
-              <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" id="email" name="email" placeholder="Email" required>
+              <div class="input-field  col s6 m12 l12">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" id="email" name="email" data-name="Correo">
+                <label for="email">Correo: </label>
+                <span class="helper-text"></span>
               </div>
-              <div class="input-field">
-                <i class="fas fa-lock"></i>
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+              <div class="input-field  col s6 m12 l12">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" id="password" name="password" data-name="Contraseña">
+                <label for="email">Contraseña: </label>
+                <span class="helper-text"></span>
               </div>
               
               <div>
@@ -61,6 +65,9 @@
     <!-- JavaScript -->
 
     <%- include('../partials/scripts.ejs') %>
+    <script type="text/javascript" src="/js/validator.min.js"></script>
+	  <script type="text/javascript" src="/js/validateLogin.js"></script>
+    
 
   </body>
 </html>

@@ -7,36 +7,41 @@
     <main class="fondo-main">
       <div class="row">
         <div class="col l8 m8 s12">
-          <form action="/" method="GET">
-            <h2 class="title center-align brown-text">Hola, <%= locals.nombreU + " " + locals.apellidoU %>. ¿Tienes alguna duda? CONTÁCTANOS</h2>
+          <form class="contact" action="/" method="GET">
+            <p class="title center-align brown-text">Hola, <%= locals.nombreU + " " + locals.apellidoU %>.</p>
+            <p class="title center-align brown-text">¿Tienes alguna duda? CONTÁCTANOS</p>
             <hr>
             <div class="card-sign-up hoverable">
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
-                <input type="text" id="name" name="name" required  minlength="4" maxlength="8">
-                <label for="name">Ej: Diego</label>
+                <input type="text" id="first_name" name="first_name" value="<%= locals.nombreU %>" data-name="Nombre">
+                <label for="first_name">Nombre:</label>
+                <span class="helper-text"></span>
               </div>
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_box</i>
-                <input type="text" id="first-name" name="first-name" required  minlength="4" maxlength="8">
-                <label for="first-name">Ej: Ventura</label>
+                <input type="text" id="last-name" name="last-name" value=" <%= locals.apellidoU %>" data-name="Apellido">
+                <label for="first-name">Apellido:</label>
+                <span class="helper-text"></span>
               </div>
               <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
-                <input id="email" type="email" class="validate" required>
-                <label for="email">Ej: diego@gmail.com</label>
-                <span class="helper-text" data-error="wrong" data-success="right">Verificación de correo</span>
+                <input id="email" type="email"  name="email" placeholder="Ej: vicente@gmail.com" data-name="Email">
+                <label for="email">Correo:</label>
+                <span class="helper-text"></span>
               </div>
               <div class="input-field col s12">
                 <i class="material-icons prefix">phone</i>
-                <input id="telephone" type="tel" class="validate">
-                <label for="telephone">Ej: 5563134566</label>
+                <input id="telephone" type="tel" name="telephone" placeholder="5563134566" data-name="Teléfono">
+                <label for="telephone">Teléfono</label>
+                <span class="helper-text"></span>
               </div>
 
               <div class="input-field col s12">
                 <i class="material-icons prefix">mode_edit</i>
-                <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-                <label for="textarea2">Mensaje...</label>
+                <textarea id="textarea2" name="textarea2" class="materialize-textarea" data-name="Dudas"></textarea>
+                <label for="textarea2">Cuentanos tus dudas...</label>
+                <span class="helper-text"></span>
               </div>
               
               <div class="registrar">
@@ -80,6 +85,8 @@
     <!-- JavaScript -->
 
     <%- include('../partials/scripts.ejs') %>
+    <script type="text/javascript" src="/js/validator.min.js"></script>
+	  <script type="text/javascript" src="/js/validateContact.js"></script>
 
   </body>
 </html>
