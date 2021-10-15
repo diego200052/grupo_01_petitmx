@@ -605,6 +605,10 @@ hr{
   color: white;
 }
 
+.barra-busqueda input::placeholder {
+  color: white;
+}
+
 
 .burger-menu {
   background-color: var(--cafe);

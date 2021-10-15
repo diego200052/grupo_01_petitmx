@@ -12,6 +12,13 @@
           <form class="col s12" action="/admin/editProduct/<%= producto.id_product %>" method="POST" onsubmit="return alert('¡Producto editado con éxito!');" enctype="multipart/form-data">
             <h2 class="title center-align brown-text">Editando producto: <%= producto.productName %></h2>
             <hr>
+
+            <% if (locals.errors) { %>
+              <% errors.forEach( (error) => { %>
+                <h4 class="error">Error: <%= error.msg %></h4>
+              <% }); %>
+            <% } %>
+
             <div class="card-sign-up hoverable">
 
               <div class="input-field">
@@ -44,8 +51,8 @@
                 <textarea id="description" name="description" class="materialize-textarea" placeholder="Descripción"><%= producto.description %></textarea>
               </div>
               <div class="input-field">
-                <label for="features">Ingredientes del producto: </label>
-                <textarea id="features" name="features" class="materialize-textarea" placeholder="Ingredientes"><%= producto.ingredients %></textarea>
+                <label for="ingredients">Ingredientes del producto: </label>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea" placeholder="Ingredientes"><%= producto.ingredients %></textarea>
               </div>
               <div class="input-field">
                 <label for="instructions">Instrucciones del producto: </label>
@@ -70,7 +77,7 @@
                 <label for="pet">Tipo de mascota: </label>
               </div>
               <div class="input-field col l6 s12">
-                <select name="category" id="category">
+                <select name="subcategory" id="subcategory">
                   <option value="" disabled selected>Selecciona la categoría del producto</option>
                   <% subcategorys.forEach( subcategory => { %>
                     <option value="<%= subcategory.id_subcategory %>"
@@ -80,7 +87,7 @@
                     ><%= subcategory.subcategoryName%></option>
                   <% }); %>
                 </select>
-                <label for="category">Categoría del producto: </label>
+                <label for="subcategory">Categoría del producto: </label>
               </div>
 
               <div class="ingresar">

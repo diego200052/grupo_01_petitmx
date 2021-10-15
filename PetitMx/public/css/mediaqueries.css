@@ -170,6 +170,13 @@
 
 }
 
+/* Desktop Devices (992+) */
+@media only screen and (min-width: 992px) {
+  .nav-container-css {
+    margin-top: -5rem;
+  }
+}
+
 /* large devices (larger desktops, 1280+) */
 @media only screen and (min-width: 1280px) {
 
@@ -306,10 +313,10 @@
     margin-top: -10px;
   }
 
-  #menu{
+  /*#menu{
     position: relative;
     left: 360px;
-  }
+  }*/
 
   .imagen-producto {
     height: 80%;

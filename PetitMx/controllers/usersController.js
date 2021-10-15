@@ -54,7 +54,7 @@ const controlador = {
 			.catch(error => res.send(error));
 		}
 		else {
-			return res.render('users/login', { errors: errors.array() });
+			return res.render('users/login', { errors: errors.array(), old: req.body });
 		}
 	},
 	logout: (req, res) => {
@@ -73,7 +73,8 @@ const controlador = {
 		  error.httpStatusCode = 404;
 		  return next(error);
 		}
-			let errors = validationResult(req);
+
+		let errors = validationResult(req);
 
 		/* Validación de errores en el formulario */
 		if(errors.isEmpty())
@@ -105,7 +106,7 @@ const controlador = {
 			.catch(error => res.send(error));
 		}
 		else {
-			return res.render('users/register', { errors: errors.array() });
+			return res.render('users/register', { errors: errors.array(), old: req.body });
 		}
 	},
     contact: (req, res) => {
