@@ -41,7 +41,7 @@ const controlador = {
 					ingredients: req.body.ingredients,
 					description: req.body.description,
 					instructions: req.body.instructions,
-					subcategory_id: req.body.category,
+					subcategory_id: req.body.subcategory,
 					brand_id: req.body.brand,
 					pet_id: req.body.pet
 				},
@@ -64,7 +64,7 @@ const controlador = {
 					description: req.body.description,
 					instructions: req.body.instructions,
 					image: file.filename,
-					subcategory_id: req.body.category,
+					subcategory_id: req.body.subcategory,
 					brand_id: req.body.brand,
 					pet_id: req.body.pet
 				},
@@ -121,6 +121,8 @@ const controlador = {
 		/* Validación de errores en el formulario */
 		if(errors.isEmpty())
 		{
+			var keys=req.body;
+			console.log(keys);
 			db.Product.create(
 			{
 				productName: req.body.productName,
@@ -129,7 +131,7 @@ const controlador = {
 				description: req.body.description,
 				instructions: req.body.instructions,
 				image: file.filename,
-				subcategory_id: req.body.category,
+				subcategory_id: req.body.subcategory,
 				brand_id: req.body.brand,
 				pet_id: req.body.pet
 			})

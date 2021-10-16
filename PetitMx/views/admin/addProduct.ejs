@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row">
 
-          <form class="col s12" action="/admin/addProduct" method="POST" onsubmit="return alert('¡Producto creado con éxito!');" enctype="multipart/form-data">
+          <form class="col s12 products" action="/admin/addProduct" method="POST" enctype="multipart/form-data">
             <h2 class="title center-align brown-text">Agregando producto nuevo</h2>
             <hr>
 
@@ -22,13 +22,14 @@
             <div class="card-sign-up hoverable">
 
               <div class="input-field">
+                <input type="text" id="productName" name="productName" placeholder="Nombre del producto" value="<%= locals.old && old.productName %>" data-name="Producto" >
                 <label for="productName">Nombre del producto: </label>
-                <input type="text" id="productName" name="productName" placeholder="Nombre del producto" value="<%= locals.old && old.productName %>" required >
+                <span class="helper-text"></span>
               </div>
 
               <div class="row">
                 <div class="input-field col l6 s12">
-                  <select name="brand" id="brand">
+                  <select name="brand" id="brand" data-name="Marca">
                     <option value="" disabled selected>Selecciona una marca</option>
                     <% brands.forEach( brand => { %>
                       <% if (locals.old && old.brand == brand.id_brand) { %>
@@ -41,32 +42,45 @@
                     <% }); %>
                   </select>
                   <label for="brand">Marca del producto: </label>
+                  <span class="helper-text"></span>
                 </div>
                 <div class="input-field col l6 s12">
+                  <input type="text" id="price" name="price" placeholder="Precio del producto" value="<%= locals.old && old.price %>" data-name="Precio">
                   <label for="price">Precio del producto: </label>
-                  <input type="text" id="price" name="price" placeholder="Precio del producto" required value="<%= locals.old && old.price %>">
+                  <span class="helper-text"></span>
                 </div>
               </div>
               
               <div class="input-field">
+                <textarea id="description" name="description" class="materialize-textarea" placeholder="Descripción" data-name="Descripción"><%= locals.old && old.description %></textarea>
                 <label for="description">Descripción del producto: </label>
-                <textarea id="description" name="description" class="materialize-textarea" placeholder="Descripción"><%= locals.old && old.description %></textarea>
+                <span class="helper-text"></span>
               </div>
               <div class="input-field">
-                <label for="ingredients">Ingredientes del producto: </label>
-                <textarea id="ingredients" name="ingredients" class="materialize-textarea" placeholder="Ingredientes"><%= locals.old && old.ingredients %></textarea>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea" placeholder="Ingredientes" data-name="Ingredientes"><%= locals.old && old.ingredients %></textarea>
+                <label for="ingredients">Ingredientes del producto:</label>
+                <span class="helper-text"></span>
               </div>
               <div class="input-field">
-                <label for="instructions">Instrucciones del producto: </label>
-                <textarea id="instructions" name="instructions" class="materialize-textarea" placeholder="Instrucciones"><%= locals.old && old.instructions %></textarea>
+                <textarea id="instructions" name="instructions" class="materialize-textarea" placeholder="Instrucciones" data-name="Instrucciones"><%= locals.old && old.instructions %></textarea>
+                <label for="instructions">Instrucciones del producto:</label>
+                <span class="helper-text"></span>
               </div>
-              <label for="image"><i class="fas fa-file-image"></i> Subir una imagen: </label>
-              <div class="input-field">
-                <input type="file" id="image" name="image" accept="image/*">
+              <label for="productImage"><i class="material-icons tiny">image</i> Subir imagen:</label>
+              <div class="file-field input-field col s12">
+                <div class="file-path-wrapper col s9 m9 l9">
+                  <input class="file-path" type="text" id="image-file"  name="image-file" data-name="Imagen">
+                  <label for="avatar-file">Producto:</label>
+                  <span class="helper-text"></span>
+                </div>
+                <div class="btn col s3 m3 l3">
+                  <span>Upload</span>
+                  <input type="file" id="productImage" name="productImage">
+                </div>
               </div>
               <div class="input-field col l6 s12">
                 <select name="pet" id="pet">
-                  <option value="" disabled selected>Selecciona el tipo de mascota</option>
+                  <option value="" disabled selected>Selecciona el tipo</option>
                   <% pets.forEach( pet => { %>
                     <% if (locals.old && old.pet == pet.id_pet) { %>
                       <option value="<%= pet.id_pet %>"
@@ -81,7 +95,7 @@
               </div>
               <div class="input-field col l6 s12">
                 <select name="subcategory" id="subcategory">
-                  <option value="" disabled selected>Selecciona la categoría del producto</option>
+                  <option value="" disabled selected>Selecciona la categoría</option>
                   <% subcategorys.forEach( subcategory => { %>
                     <% if (locals.old && old.category == subcategory.id_subcategory) { %>
                       <option value="<%= subcategory.id_subcategory %>"
@@ -119,6 +133,8 @@
         var instances = M.FormSelect.init(elems);
       });
     </script>
+    <script type="text/javascript" src="/js/validator.min.js"></script>
+	  <script type="text/javascript" src="/js/validateAddProduct.js"></script>
 
   </body>
 </html>

@@ -32,12 +32,12 @@ const adminController = require('../controllers/adminController');
 /*** CREATE ONE PRODUCT ***/
 router.get('/addProduct', adminController.addProduct);
 
-router.post('/addProduct', upload.single('image'), productValidator, adminController.storeProduct);
+router.post('/addProduct', upload.single('productImage'), productValidator, adminController.storeProduct);
 
 /*** EDIT ONE PRODUCT ***/
 router.get('/editProduct/:id', adminController.editProduct);
 
-router.post('/editProduct/:id', upload.single('image'), productValidator, adminController.updateProduct);
+router.post('/editProduct/:id', upload.single('productImage'), productValidator, adminController.updateProduct);
 
 /*** DELETE ONE PRODUCT***/
 router.delete('/deleteProduct/:id', adminController.destroyProduct);
