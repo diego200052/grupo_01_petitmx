@@ -37,7 +37,7 @@ app.use(cookieParser());
 app.use(loginCookie);
 
 //Levantando el servidor en el puerto 3030
-app.listen(3030,() => console.log('Server running in 3030 port'));
+app.listen(process.env.PORT || 3030 , () => console.log('Server running in 3030 port'));
 
 app.use('/', mainRoutes);
 app.use('/users', usersRoutes);
