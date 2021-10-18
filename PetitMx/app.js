@@ -1,10 +1,11 @@
 
 // Require de Express
 const express = require('express');
-const mainRoutes = require('./routes/main')
-const usersRoutes = require('./routes/users')
-const productsRoutes = require('./routes/products')
-const adminRoutes = require('./routes/admin')
+const mainRoutes = require('./routes/main');
+const usersRoutes = require('./routes/users');
+const productsRoutes = require('./routes/products');
+const adminRoutes = require('./routes/admin');
+const apiRoutes = require('./routes/api');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
 
@@ -43,6 +44,7 @@ app.use('/', mainRoutes);
 app.use('/users', usersRoutes);
 app.use('/products', productsRoutes);
 app.use('/admin', adminRoutes);
+app.use('/api', apiRoutes);
 
 // ************ error handler ************
 app.use((req, res, next) => {
