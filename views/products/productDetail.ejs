@@ -12,20 +12,20 @@
             <img class="imagen-producto" src="/img/productos/<%= producto.image %>"></img>
           </div>  
           <div class="tproducto">
-            <h3><%= producto.productName %></h3>
+            <h5><%= producto.productName %></h5>
             <hr>
             <p class="precio-producto"><b>$<%= producto.price %></b></p>
-            <h4>Descripción</h4>
+            <h5>Descripción</h5>
             <div class="descripcion-producto">
               <p><%= producto.description %></p>
             </div>
             <div class="quantity">
               
-              <a class="waves-effect waves-light btn-small padding-btn"><i class="material-icons">remove</i></a>
+              <a class="waves-effect waves-light btn-small padding-btn" onclick="aumentar()"><i class="material-icons">add</i></a>
                 
-              <input class="input-count" type="text" name="name" value="1">
+              <input class="input-count" id="cantidad" type="text" name="name" value="0">
               
-              <a class="waves-effect waves-light btn-small padding-btn"><i class="material-icons">add</i></a>
+              <a class="waves-effect waves-light btn-small padding-btn" onclick="disminuir()"><i class="material-icons">remove</i></a>
 
               <button class="agregar-carrito-button" type="submit" value="Agregar al carrito">
                 Agregar al carrito
@@ -33,12 +33,12 @@
 
               <br><br>
 
-              <a href="/admin/editProduct/<%= producto.id_product %>" class="waves-effect waves-orange btn agregar-carrito-button" type="submit" value="Agregar al carrito">
-                Editar producto
+              <a href="/admin/editProduct/<%= producto.id_product %>" class="waves-effect waves-orange btn-edit-prod center-align" type="submit" value="Agregar al carrito">
+                <b>EDITAR</b>
               </a>
 
-              <form onsubmit="return confirm('¿Deseas eliminar el producto?');" action="/admin/deleteProduct/<%= producto.id_product %>?_method=DELETE" method="POST" style="display: inline-flex">
-                <button type="submit" class="waves-effect waves-red btn agregar-carrito-button">ELIMINAR</button>
+              <form class="deleteProduct" action="/admin/deleteProduct/<%= producto.id_product %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="waves-effect waves-red btn-del-prod center-align"><b>ELIMINAR</b></button>
               </form>
 
             </div>
@@ -49,25 +49,25 @@
         <div class="flex-container tarjeta-inferior-producto">
           <div class="caracteristicas-tproducto">
             <% if (producto.ingredients) { %>
-              <h4>Ingredientes</h4>
+              <h5>Ingredientes</h5>
               <hr>
-              <ul>
+              <ul id="ingre-instruc-list">
                 <li><%= producto.ingredients %></li>
               </ul>
             <% } %>
             <% if (producto.instructions) { %>
-              <h4>Instrucciones de uso</h4>
+              <h5>Instrucciones de uso</h5>
               <hr>
-              <ul>
+              <ul id="ingre-instruc-list">
                 <li><%= producto.instructions %></li>
               </ul>
             <% } %>
           </div>
           <div class="promo-tproducto">
-            <h4>Envios a todo México</h4>
-              <i class="fas fa-truck"></i>
-            <h4>Garantía de safisfacción</h4>
-              <i class="fas fa-shield-alt"></i>
+            <h5>Envios a todo México</h5>
+              <i class="material-icons medium green-text text-darken-1">local_shipping</i>
+            <h5>Garantía de safisfacción</h5>
+              <i class="material-icons medium blue-text text-light-blue">security</i>
           </div>
         </div>
       </section>
@@ -80,6 +80,7 @@
     <!-- JavaScript -->
 
     <%- include('../partials/scripts.ejs') %>
+    <script type="text/javascript" src="/js/confirmDelete.js"></script>
 
   </body>
 

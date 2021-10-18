@@ -11,6 +11,7 @@
   #imagenInicioS {
       display: none;
   }
+
 }
 
 
@@ -142,10 +143,14 @@
     width: 65%;
   }
 
+
   .buscador {
-    margin-top: 1rem;
-    width: 75% !important;
-    margin-left: 0px !important;
+    margin-top: -2rem;
+    margin-left: 75px !important;
+  }
+
+  .buscador-size{
+    width: 100% !important;
   }
 
   .menu{
@@ -156,29 +161,58 @@
     margin-top: 30px;
   }
 
-  #position-cart-fav{
-    margin-bottom: 0px;
-    position: relative;
-    top: -20px;
-    right: 15px;
+  #menu{
+    left: 5px;
   }
 
-  #menu{
-    position: relative;
-    left: 35px;
+  .search-margin{
+    margin-bottom: 8px !important;
   }
+
+  .menu-nav-wrapper{
+    justify-content: space-around;
+  }
+
+  .session-margin{
+    margin-top: 10px;
+    margin-right: 20px !important;
+  }
+  
 
 }
 
 /* Desktop Devices (992+) */
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
   .nav-container-css {
     margin-top: -5rem;
   }
-}
+} */
 
 /* large devices (larger desktops, 1280+) */
 @media only screen and (min-width: 1280px) {
+
+  .register-icon{
+    position: relative;
+    right: 36px;
+  }
+
+   .card-content:hover .scrolling {
+     left: -250%;
+     width: 500%;
+  }
+   .scrolling {
+     position: relative;
+     left: 0%;
+     width: 100%;
+     transition: left 3s, width 3s ease;
+  }
+   
+
+  .buscador-size{
+    width: 60% !important;
+    margin-left: 220px !important;
+    margin-top: -70px;
+  }
 
   #position-cart-fav{
     margin-bottom: 0px;

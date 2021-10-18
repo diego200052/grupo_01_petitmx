@@ -186,6 +186,14 @@ for (const unCampo of formCampos) {
             if (!validator.isEmpty(unCampo.value)) {
 				validateInput(' debe ser un archivo de imagen válido (JPG,JPGE,PNG,GIF).', this, 'isImage');
 			}
+			else{
+                unCampo.classList.remove('invalid');
+                unCampo.classList.add('valid');
+                // Eliminamos el mensaje de error en el span 'invalid'
+                unCampo.nextElementSibling.nextElementSibling.innerHTML = '';
+                // Al objeto literal de errores, le eliminamos la prop del campo que tenía error
+                delete camposConError[unCampo.name];
+            }
 
         })
     }
@@ -202,12 +210,21 @@ formProductUpdate.addEventListener('submit', function (event) {
 	// Verificamos SI hay campos vacíos
 	formCampos.forEach( (unCampo) =>{
 		let valorDelCampo = unCampo.value.trim();
-		if( unCampo.name !== 'ingredients' ||  unCampo.name !== 'instructions' || unCampo-name !== 'image-file'){
+		if( unCampo.name === 'ingredients' ||  unCampo.name === 'instructions' || unCampo.name === 'image-file' || unCampo.name === 'productImage'){
             if (validator.isEmpty(valorDelCampo)) {
+                //console.log(valorDelCampo);
+				return
+            }else{
+				// Al objeto literal de errores, le eliminamos la prop del campo que tenía error
+                return
+			}
+        }
+		else{
+			if (validator.isEmpty(valorDelCampo)) {
                 console.log(valorDelCampo);
-                camposConError[unCampo.name] = true;
-            }
-        }	
+				camposConError[unCampo.name] = true;
+			}
+		}	
 	} )
 	
 

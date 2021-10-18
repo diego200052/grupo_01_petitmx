@@ -36,6 +36,10 @@ function validateInput(message, input, typeOfValidator) {
 	/* definimos los tipos de validacion */
 	switch (typeOfValidator) {
 
+		case 'isName':
+			validation = !validator.isAlpha(valorDelCampo,'es-ES');
+			break;
+
 		/* Comprueba si la cadena es un correo electrónico*/
 		case 'isEmail':
 			// validation = false -> Si no cumple
@@ -127,6 +131,7 @@ for (const unCampo of formCampos) {
 			// Si el campo no esta vacío
 			if (!validator.isEmpty(unCampo.value)) {
 				validateInput(' debe contener al menos 2 caracteres.', this, 'isLength');
+				validateInput(' debe contener solo letras.', this, 'isName');
 			}
 		})
     }
@@ -196,7 +201,11 @@ formRegister.addEventListener('submit', function (event) {
 	console.log(camposConError);
 	if (Object.keys(camposConError).length > 0) {
 		event.preventDefault();
-		alert('Hay campos vacíos o con errores. Por favor verifica.'); 
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Hay campos vacíos o con errores. Por favor verifica.',
+		  })
 	}else{
 		event.preventDefault();
 
