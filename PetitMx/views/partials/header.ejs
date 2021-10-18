@@ -1,7 +1,7 @@
 <header>
     <!-- Comienza Navbar -->
   <nav class="nav-extended yellow darken-2">
-    <div class="row pt1">
+    <div class="row pt1 title-margin">
 
       <div class="col s12 center-align logo hide-on-med-and-up">
         <a href="/"><img class="logo-size" src="/img/versionLimpia.png" alt=""></a>
@@ -9,10 +9,45 @@
       <div class="col m3 l3 center-align logo hide-on-small-only">
         <a href="/"><img class="logo-size" src="/img/versionHorizontal.png" alt=""></a>
       </div>
+        <!-- Este row contiene 'mi cuenta' y 'cerrar sesion' -->
+      <div class="col offset-m3 offset-l3 m6 l6 login-sign-up botones-navbar hide-on-small-only">
+        <div class="row right session-margin">
+          <div class="col register-icon">
+            <% if (locals.nombreU === undefined) { %>
+              <a  href="/users/register" >
+                <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
+              </a> 
+            <% } else { %>
+              <a class="valign-wrapper" href="/users/account">
+                  <span class="boton-navbar">Mi cuenta</span>
+                  <img src="/img/users/avatars/<%= locals.avatarU %>" width="40" height="40" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                
+              </a>
+            <% } %>
+          </div>
+          <div class="col">
+            <% if (locals.nombreU === undefined) { %>
+              <a href="/users/login">
+                <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
+              </a>
+            <% } %>
+            <% if (locals.nombreU !== undefined) { %>
+              <a  class="valign-wrapper" href="/users/logout">
+                <span class="boton-navbar">Cerrar sesión <i class="fas fa-sign-in-alt icon-padding"></i></span>   
+              </a>
+            <% } %>
+          </div>
+        </div>
+      </div>  
+          
+    </div>
 
+    <div class="row search-margin">
       <div class="col s12 m9 l9 buscador">
+        <!-- Este row es el buscador -->
         <div class="row">
-          <div class="col s12 m6 l6 center-align">
+          <!-- Aqui va el buscador -->
+          <div class="col s12 m6 l6 center-align buscador-size">
             <div class="search_wrap search_wrap_3">
               <div class="search_box">
                 <form class="flex-container barra-busqueda" action="/products" method="GET">
@@ -24,49 +59,22 @@
               </div>
             </div>
           </div>
-          <div class="col m6 offset-l1 l5 login-sign-up botones-navbar hide-on-small-only">
-            <div class="row">
-              <div class="col">
-                <% if (locals.nombreU === undefined) { %>
-                  <a href="/users/register">
-                    <span class="boton-navbar">Registrate <i class="fas fa-user-plus icon-padding"></i></span>
-                  </a> 
-                <% } else { %>
-                  <a href="/users/account">
-                      <span class="boton-navbar">Mi cuenta</span>
-                      <img src="/img/users/avatars/<%= locals.avatarU %>" width="30" height="30" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                    
-                  </a>
-                <% } %>
-              </div>
-              <div class="col offset-m1">
-                <% if (locals.nombreU === undefined) { %>
-                  <a href="/users/login">
-                    <span class="boton-navbar">Login <i class="fas fa-sign-in-alt icon-padding"></i></span>   
-                  </a>
-                <% } %>
-                <% if (locals.nombreU !== undefined) { %>
-                  <a href="/users/logout">
-                    <span class="boton-navbar">Cerrar sesión <i class="fas fa-sign-in-alt icon-padding"></i></span>   
-                  </a>
-                <% } %>
-              </div>
-            </div>
+
+        </div>
+
+        <div class="col s12 hide-on-med-and-up">
+          <div class="nav-wrapper burger-menu">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="fas fa-bars"></i>
+            </a>
           </div>
         </div>
+
       </div>     
-      
-      <div class="col s12 hide-on-med-and-up">
-        <div class="nav-wrapper burger-menu">
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="fas fa-bars"></i>
-          </a>
-        </div>
-      </div>
     </div>
 
     <div class="row hide-on-small-only mb0 nav-container-css">
-      <div class="nav-wrapper">
+      <div class="nav-wrapper valign-wrapper menu-nav-wrapper">
         <ul id="menu" class="left">
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/nosotros">Nosotros</a></li>
@@ -80,7 +88,7 @@
           <li><a href="/products">Productos</a></li>
           <li><a href="/users/contact">Contacto</a></li>
         </ul>
-        <ul class="right" id="position-cart-fav">
+        <ul class="right">
           <li><a href="#"><i class="large red-text material-icons">favorite</i></a></li>
           <li>$0.00</li>
           <li><a href="/products/productCart"><i class="large brown-text material-icons">shopping_basket</i></a></li>
@@ -97,7 +105,7 @@
     <li><a href="/nosotros">Nosotros</a></li>
     <li><a href="#" data-target='dropdown1' class='dropdown-trigger'>Animales</a>
     </li>
-    <li><a href="#">Productos</a></li>
+    <li><a href="/products">Productos</a></li>
     <li><a href="/users/contact">Contacto</a></li>
     <li><div class="divider"></div></li>
     <li>

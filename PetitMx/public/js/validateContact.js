@@ -165,8 +165,26 @@ formContact.addEventListener('submit', function (event) {
 	console.log(camposConError);
 	if (Object.keys(camposConError).length > 0) {
 		event.preventDefault();
-		alert('Hay campos vacíos o con errores. Por favor verifica.'); 
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Hay campos vacíos o con errores. Por favor verifica.',
+		  })
 	}else{
-		return alert('Nosotros te contactaremos!'); 
+		event.preventDefault();
+
+		Swal.fire({
+			title: 'Gracias por tu mensaje!!',
+			text: 'Nosotros te contactaremos!',
+			imageUrl: '/img/message-image.jpg',
+			imageWidth: 450,
+			imageHeight: 305,
+			imageAlt: 'Message Image',
+		  }).then( val => {
+			  if (val){
+				formContact.submit();
+				return ;
+			  }
+		  })
 	}
 })
