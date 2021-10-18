@@ -179,18 +179,46 @@ formAccount.addEventListener('submit', function (event) {
 	// Verificamos SI hay campos vacíos
 	formCampos.forEach( (unCampo) =>{
 		let valorDelCampo = unCampo.value.trim();
-		if (validator.isEmpty(valorDelCampo)) {
-			console.log(valorDelCampo);
-			camposConError[unCampo.name] = true;
-		}
+		if(unCampo.name === 'image-file' ){
+            if (validator.isEmpty(valorDelCampo)) {
+                //console.log(valorDelCampo);
+				return
+            }else{
+				// Al objeto literal de errores, le eliminamos la prop del campo que tenía error
+                return
+			}
+        }
+		else{
+			if (validator.isEmpty(valorDelCampo)) {
+                console.log(valorDelCampo);
+				camposConError[unCampo.name] = true;
+			}
+		}	
+		
 	} )
 	
 
 	console.log(camposConError);
 	if (Object.keys(camposConError).length > 0) {
 		event.preventDefault();
-		alert('Hay campos vacíos o con errores. Por favor verifica.'); 
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Hay campos vacíos o con errores. Por favor verifica.',
+		})
 	}else{
-		return alert('Los datos de tu cuenta se han actualizado con éxito!');
+		event.preventDefault();
+
+		Swal.fire({
+			icon: 'success',
+			title: 'Los datos de tu cuenta se han actualizado con éxito!',
+			showConfirmButton: false,
+			timer: 2500
+		  }).then( val => {
+			  if (val){
+				formAccount.submit();
+				return ;
+			  }
+		  })
 	}
 })
