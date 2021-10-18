@@ -24,7 +24,7 @@ USE petit_db;
 
 CREATE TABLE login(
 	id_login	INTEGER		UNSIGNED	AUTO_INCREMENT,
-    email		VARCHAR(30)	NOT NULL UNIQUE,
+    email		VARCHAR(75)	NOT NULL UNIQUE,
     password	VARCHAR(75)	NOT NULL,
 	PRIMARY KEY(id_login)
 );
