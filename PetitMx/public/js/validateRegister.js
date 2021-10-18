@@ -36,6 +36,10 @@ function validateInput(message, input, typeOfValidator) {
 	/* definimos los tipos de validacion */
 	switch (typeOfValidator) {
 
+		case 'isName':
+			validation = !validator.isAlpha(valorDelCampo,'es-ES');
+			break;
+
 		/* Comprueba si la cadena es un correo electrónico*/
 		case 'isEmail':
 			// validation = false -> Si no cumple
@@ -127,6 +131,7 @@ for (const unCampo of formCampos) {
 			// Si el campo no esta vacío
 			if (!validator.isEmpty(unCampo.value)) {
 				validateInput(' debe contener al menos 2 caracteres.', this, 'isLength');
+				validateInput(' debe contener solo letras.', this, 'isName');
 			}
 		})
     }
