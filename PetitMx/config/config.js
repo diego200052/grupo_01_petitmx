@@ -1,9 +1,9 @@
 module.exports = {
   "development": {
-    "username": process.env.DBUSERNAME || "digitalhouse",
-    "password": process.env.DBPASSWORD ||"digitalhouse",
-    "database": process.env.DBNAME || "petit_db",
-    "host": process.env.DBHOST || "127.0.0.1",
+    "username": "digitalhouse",
+    "password": "digitalhouse",
+    "database": "petit_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
