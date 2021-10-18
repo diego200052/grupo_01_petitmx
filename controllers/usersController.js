@@ -81,7 +81,7 @@ const controlador = {
 		{
 			let passwordHash = bcrypt.hashSync(req.body.password, 10);	
 
-			// Por default el rol: ID 1 - Cliente
+			// Por default el rol: ID 1 o 5 - Cliente
 			db.Login.create(
 			{
 				email: req.body.email,
@@ -94,7 +94,7 @@ const controlador = {
 					last_name: req.body.last_name,
 					status: 1,
 					avatar: file.filename,
-					rol_id: 1,
+					rol_id: 5,
 					login_id: newLogin.id_login
 				})
 				.then(() => {
