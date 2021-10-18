@@ -1,1 +1,1 @@
-web: node ./PetitMx/app.js
+web: node app.js
