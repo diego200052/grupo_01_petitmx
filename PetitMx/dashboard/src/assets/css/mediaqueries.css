@@ -1,0 +1,13 @@
+@media only screen and (min-width: 768px) {
+
+    .img-logo{
+        height: 80%;
+        width: 80%;
+    }
+
+    #title-dashboard{
+        margin-left: 15px !important;
+    }
+    
+  
+  }
