@@ -1,7 +1,7 @@
 import React from 'react';
-import ContentRowCenter from './ContentRowCenter';
-import ContentRowMovies from './ContentRowMovies';
-import Chart from './Chart';
+import InfoTotalUser from './InfoTotalUser';
+import InfoTotalProduct from './InfoTotalProduct';
+import InfoTotalCategories from './InfoTotalCategories';
 
 function ContentRowTop(){
     return(
@@ -12,10 +12,12 @@ function ContentRowTop(){
 						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
 					</div>
 				
-					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
-					<ContentRowCenter />
-					<Chart />
+					{/*<!-- Tarjetas de información -->*/}
+					<div className="row">
+						<InfoTotalUser/>
+						<InfoTotalProduct/>
+						<InfoTotalCategories/>
+					</div>
 	
 				</div>
 				{/*<!--End Content Row Top-->*/}
