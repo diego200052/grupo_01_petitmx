@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row">
 
-          <form class="col s12 productUpdate" action="/admin/editProduct/<%= producto.id_product %>" method="POST" onsubmit="return alert('¡Producto editado con éxito!');" enctype="multipart/form-data">
+          <form class="col s12 productUpdate" action="/admin/editProduct/<%= producto.id_product %>" method="POST"  enctype="multipart/form-data">
             <h2 class="title center-align brown-text">Editando producto: <%= producto.productName %></h2>
             <hr>
 
@@ -75,7 +75,7 @@
                   <span class="helper-text"></span>
                 </div>
                 <div class="btn col s3 m3 l3">
-                  <span>Upload</span>
+                  <i class="material-icons">file_upload</i>
                   <input type="file" id="productImage" name="productImage">
                 </div>
               </div>
@@ -107,7 +107,7 @@
               </div>
 
               <div class="ingresar">
-                  <input type="submit" class="btn-edit-prod"  value="ACTUALIZAR PRODUCTO">
+                  <input type="submit" class="btn-update-prod"  value="ACTUALIZAR PRODUCTO">
               </div>
             </div>
           </form>

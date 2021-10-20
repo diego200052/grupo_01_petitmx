@@ -75,7 +75,7 @@ footer div img {
   margin-bottom: 10px;
 }
 
-.btn-edit-prod {
+.btn-update-prod {
   /*width: 150px;*/
   background-color: var(--cafe);
   border: none;
@@ -85,6 +85,34 @@ footer div img {
   color: #fff;
   font-weight: 600;
   margin: 10px 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-edit-prod {
+  width: 100px;
+  background-color: #FFE57F;
+  border: none;
+  /*height: 49px;*/
+  padding: 1.05em;
+  border-radius: 49px;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-del-prod {
+  width: 100px;
+  background-color: var(--rojo);
+  border: none;
+  /*height: 49px;*/
+  padding: 1.05em;
+  border-radius: 49px;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 25px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -167,14 +195,12 @@ hr{
 
 .contenedor-imagen {
   text-align: center;
-  height: 400px;
   width: auto;
   margin: 20px;
 }
 
-.imagen-producto {
-  width: auto;
-  height: 100%;
+#ingre-instruc-list{
+  margin-top: 15px;
 }
 
 .tarjeta-superior-producto {
@@ -186,8 +212,13 @@ hr{
   width: 100%;
 }
 
-.tproducto h3 {
-  text-align: center;
+.tproducto h5 {
+  padding: 0px 8px;
+  font-weight: bold;
+}
+
+.quantity{
+  margin-left: 15px;
 }
 
 .quantity input {
@@ -203,6 +234,7 @@ hr{
 .precio-producto {
   font-size: 1.5rem;
   color: var(--rosa);
+  margin-left: 15px;
 }
 
 .tarjeta-inferior-producto {
@@ -217,19 +249,23 @@ hr{
   width: 100%;
 }
 
-.promo-tproducto .fas {
-  font-size: 3em;
-  text-align: center;
-  width: 100%;
+.caracteristicas-tproducto h5{
+  font-weight: bold;
 }
 
-.promo-tproducto {
+
+.promo-tproducto{
   width: 100%;
   text-align: center;
+  font-weight: bold;
+}
+
+.promo-tproducto h5{
+  font-weight: bold;
 }
 
 .agregar-carrito-button {
-  margin-left: 20px;
+  margin-left: 15px;
   background-color: var(--rosa);
   border: none;
   color:white;
@@ -250,7 +286,7 @@ hr{
 }
 
 .descripcion-producto {
-  margin-left: 20px;
+  margin-left: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -589,6 +625,10 @@ hr{
 
 .search_wrap.search_wrap_3 .search_box .btn{
 	border-radius: 50%;
+}
+
+.title-margin{
+  margin-bottom: 0px !important;
 }
 
 .buscador {

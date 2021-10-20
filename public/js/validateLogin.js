@@ -106,7 +106,11 @@ formLogin.addEventListener('submit', function (event) {
 	//console.log(camposConError);
 	if (Object.keys(camposConError).length > 0) {
 		event.preventDefault();
-		alert('Hay campos vacíos o con errores. Por favor verifica.'); 
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Hay campos vacíos o con errores. Por favor verifica.',
+		  })
 	}else{
 		return; 
 	}

@@ -1,6 +1,14 @@
 window.addEventListener('load', () =>{
     const preload = document.querySelector('.preload');
-    preload.classList.add('preload-finish');
+    try{
+        preload.classList.add('preload-finish');
+        
+    }catch(e){     
+        window.onerror = function(){
+            return true;
+         }
+    }
+
 });
 
 $(document).ready(function(){
@@ -10,7 +18,14 @@ $(document).ready(function(){
     $('.slider').slider();
     $('.parallax').parallax();
     $('#textarea2').val('');
-    M.textareaAutoResize($('#textarea2'));
+    try{
+        M.textareaAutoResize($('#textarea2'));
+    }catch(e){     
+        window.onerror = function(){
+            return true;
+         }
+    }
+    
     
 });
 
