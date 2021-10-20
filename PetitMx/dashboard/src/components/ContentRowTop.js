@@ -3,6 +3,7 @@ import InfoTotalUser from './InfoTotalUser';
 import InfoTotalProduct from './InfoTotalProduct';
 import InfoTotalCategories from './InfoTotalCategories';
 
+
 function ContentRowTop(){
     return(
         <React.Fragment>

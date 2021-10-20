@@ -2,6 +2,7 @@ import React from 'react';
 import LastUserInDb from './LastUserInDb';
 import LastProductInDb from './LastProductInDb';
 import SubcategoriesInDb from './SubcategoriesInDb';
+import Chart from './Chart';
 
 function ContentRowCenter(){
     return (
@@ -17,6 +18,9 @@ function ContentRowCenter(){
 
             {/*<!-- Subcategories in DB -->*/}
             <SubcategoriesInDb />
+
+            {/*<!-- List of products in DB -->*/}
+            <Chart />
 
         </div>
     )
