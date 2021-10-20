@@ -42,15 +42,20 @@ const controller = {
         let allProducts = db.Product.findAll({
             include: ['brand', 'subcategorys', 'pets']
         });
+
+        let allSubcategories = db.Subcategory.findAll({
+            attributes:[[sequelize.fn('COUNT', sequelize.col('id_subcategory')),'total_subcategories']],
+        });
     
-        Promise.all([allProducts, countByCategory])
-        .then (function ([products, countByCategory]) {
+        Promise.all([allProducts, countByCategory, allSubcategories])
+        .then (function ([products, countByCategory,allSubcategories]) {
             let productsJSON = JSON.parse(JSON.stringify(products));
             for (let i=0; i<productsJSON.length; i++) {
                 productsJSON[i].detailURL = "/products/productDetail/" + productsJSON[i].id_product;
             }
             let result = {
                 count: products.length,
+                countSubcategories: allSubcategories,
                 countByCategory: countByCategory,
                 products: productsJSON
             }
@@ -84,8 +89,10 @@ const controller = {
         .findByPk(req.params.id, { include: ['brand', 'subcategorys', 'pets'] })
         .then(function(product) {
             if (product) {
-                product["image"] = "/img/productos/" + product.image;
-                res.send(product);
+                let productJSON = JSON.parse(JSON.stringify(product));
+                productJSON["detailURL"] = "/products/productDetail/" + productJSON.id_product;
+                productJSON["image"] = "/img/productos/" + productJSON.image;
+                res.send(productJSON);
             } else {
                 res.send({error:"El producto no existe."})
             }
