@@ -30,7 +30,7 @@ class LastUserInDb extends Component {
             );
         } else {
             let ultimoUsuario = data.users[data.users.length -1];
-            this.apiCall("/api/users/" + ultimoUsuario.id_user, this.showUser);
+            this.apiCall("https://petitmx.herokuapp.com/api/users/" + ultimoUsuario.id_user, this.showUser);
         }
     }
 
@@ -51,7 +51,7 @@ class LastUserInDb extends Component {
 
     /* Aca va la funcion a la q llamamos desde el componentDidMount */
     getUsers(){
-        this.apiCall("/api/users", this.showUsers)
+        this.apiCall("https://petitmx.herokuapp.com/api/users", this.showUsers)
     }
 
     render(){

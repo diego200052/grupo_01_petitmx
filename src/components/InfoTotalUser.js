@@ -40,7 +40,7 @@ class InfoTotalUser extends Component{
 
     /* Aca va la funcion a la q llamamos desde el componentDidMount */
     getUsers(){
-        this.apiCall("/api/users", this.showUsers)
+        this.apiCall("https://petitmx.herokuapp.com/api/users", this.showUsers)
     }
 
     render(){

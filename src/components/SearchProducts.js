@@ -20,7 +20,7 @@ function SearchProducts(){
 
 
 	// Búsqueda de productos por id
-    const url = `/api/products/${keyword}`
+    const url = `https://petitmx.herokuapp.com/api/products/${keyword}`
 	
     
 

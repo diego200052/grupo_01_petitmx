@@ -43,7 +43,7 @@ class InfoTotalProduct extends Component{
 
     /* Aca va la funcion a la q llamamos desde el componentDidMount */
     traerProductos(){
-        this.apiCall("/api/products", this.mostrarProductos)
+        this.apiCall("https://petitmx.herokuapp.com/api/products", this.mostrarProductos)
     }
 
     render(){

@@ -14,7 +14,7 @@ class Chart extends Component{
 	//Montaje
     componentDidMount(){
     
-        fetch('/api/products')
+        fetch('https://petitmx.herokuapp.com/api/products')
         .then(respuesta =>{
             return respuesta.json()
         })

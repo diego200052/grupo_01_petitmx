@@ -46,7 +46,7 @@ class SubcategoriesInDb extends Component {
 
     /* Aca va la funcion a la q llamamos desde el componentDidMount */
     getProducts(){
-        this.apiCall("/api/products", this.showProducts);
+        this.apiCall("https://petitmx.herokuapp.com/api/products", this.showProducts);
     }
 
     render() {

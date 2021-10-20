@@ -43,7 +43,7 @@ class InfoTotalCategories extends Component{
 
     /* Aca va la funcion a la q llamamos desde el componentDidMount */
     getCategories(){
-        this.apiCall("/api/products", this.showCategories)
+        this.apiCall("https://petitmx.herokuapp.com/api/products", this.showCategories)
     }
 
     render(){

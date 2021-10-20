@@ -30,7 +30,7 @@ class LastProductInDb extends Component {
             );
         } else {
             let ultimoProducto = data.products[data.products.length -1];
-            this.apiCall("/api/products/" + ultimoProducto.id_product, this.showProduct);
+            this.apiCall("https://petitmx.herokuapp.com/api/products/" + ultimoProducto.id_product, this.showProduct);
         }
     }
 
@@ -51,7 +51,7 @@ class LastProductInDb extends Component {
 
     /* Aca va la funcion a la q llamamos desde el componentDidMount */
     getProducts(){
-        this.apiCall("/api/products", this.showProducts);
+        this.apiCall("https://petitmx.herokuapp.com/api/products", this.showProducts);
     }
 
     render() {
