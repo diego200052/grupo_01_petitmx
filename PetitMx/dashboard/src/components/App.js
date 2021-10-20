@@ -1,6 +1,7 @@
 import React from 'react';
 import SideBar from './SideBar';
 import ContentWrapper from './ContentWrapper';
+import SearchProducts from './SearchProducts';
 import NotFound from './NotFound';
 
 import { Route, Switch } from 'react-router-dom';
@@ -21,9 +22,9 @@ function App() {
             
             <Route path="/lastmovie" component={ LastMovieInDb }/>
             
-            <Route path="/content" component={ ContentRowMovies }/>
+            <Route path="/content" component={ ContentRowMovies }/> */}
 
-            <Route path="/search" component={ SearchMovies }/> */}
+            <Route path="/search" component={ SearchProducts }/>
 
             <Route component={NotFound} />
 
