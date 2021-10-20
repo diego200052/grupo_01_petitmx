@@ -2,6 +2,7 @@ import React from 'react';
 import SideBar from './SideBar';
 import ContentWrapper from './ContentWrapper';
 import SearchProducts from './SearchProducts';
+import SubcategoriesInDb from './SubcategoriesInDb';
 import NotFound from './NotFound';
 
 import { Route, Switch } from 'react-router-dom';
@@ -17,6 +18,8 @@ function App() {
           <Switch>
           
             <Route exact path="/" component={ ContentWrapper }/>
+
+            <Route path="/subcategories" component={ SubcategoriesInDb }/>
                         
             {/* <Route path="/genres" component={ GenresInDb }/>
             

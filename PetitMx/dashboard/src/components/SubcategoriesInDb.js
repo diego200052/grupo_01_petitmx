@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SubcategoriesCard from './SubcategoriesCard';
 
 class SubcategoriesInDb extends Component {
     /* --- Aca arrancamos dandole el estado */
@@ -21,7 +22,7 @@ class SubcategoriesInDb extends Component {
     /* Esta es la funcion consecuencia de "apiCall()" */
 
     showProducts = (data)=>{
-        console.log(data.countSubcategories);
+        console.log(data.countByCategory);
         if(data.products.length === 0) {
             this.setState(
                 {
@@ -31,7 +32,7 @@ class SubcategoriesInDb extends Component {
         } else {
             this.setState(
                 {
-                    productsCategories: data.countSubcategories,
+                    productsCategories: data.countByCategory,
                 }
             );
         }
@@ -49,36 +50,42 @@ class SubcategoriesInDb extends Component {
     }
 
     render() {
-        if(this.state.producto !== undefined) {
+        if(this.state.productsCategories !== undefined) {
             return(
-                <div className="col-sm-12 col-lg-5 mb-4">
+                <div className="row d-sm-flex aligns-items-center justify-content-center mb-4 mt-4">
+                <div className="col-lg-11 mb-4">
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
-                            <h5 className="m-0 font-weight-bold text-gray-800">Último producto en la base de datos</h5>
-                        </div>
-                        <div className="card-body">
-                            <h3 className="text-center">{`${this.state.producto.productName}`}</h3>
-                            <div className="text-center">
-                                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={`http://localhost:3030${this.state.producto.image}`} alt="{`${this.state.producto.productName}`}"/>
+                            <h5 className="m-0 font-weight-bold text-gray-800">
+                                Subcategorías de productos
+                            </h5>
                             </div>
-                            <div className="text-center mt-3">
-                                <a className="btn btn-primary" target="_blank" rel="nofollow" href={`http://localhost:3030${this.state.producto.detailURL}`}>Ver detalle</a>
+                            <div className="card-body">
+                            <div className="row">
+                            {this.state.productsCategories.map( (countByCategory, i) => {
+                                return <SubcategoriesCard {...countByCategory} key={i}/>
+                            })}
                             </div>
                         </div>
                     </div>
                 </div>
+                </div>
             )
         } else {
             return(
-                <div className="col-sm-12 col-lg-5 mb-4">
+                <div className="row d-sm-flex aligns-items-center justify-content-center mb-4 mt-4">
+                <div className="col-lg-6 mb-4">
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
-                            <h5 className="m-0 font-weight-bold text-gray-800">Último producto en la base de datos</h5>
+                            <h5 className="m-0 font-weight-bold text-gray-800">
+                                Subcategorías de productos
+                            </h5>
                         </div>
                         <div className="card-body">
-                            <h3 className="text-center">No hay productos en la base de datos.</h3>
+                            Ninguna
                         </div>
                     </div>
+                </div>
                 </div>
             )
         }

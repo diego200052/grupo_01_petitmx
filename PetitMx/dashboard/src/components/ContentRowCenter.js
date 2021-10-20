@@ -1,8 +1,8 @@
 import React from 'react';
 import LastUserInDb from './LastUserInDb';
 import LastProductInDb from './LastProductInDb';
-import SubcategoriesInDb from './SubcategoriesInDb';
 import Chart from './Chart';
+//import SubcategoriesInDb from './SubcategoriesInDb';
 
 function ContentRowCenter(){
     return (
@@ -17,7 +17,7 @@ function ContentRowCenter(){
             {/*<!-- End content row last propduct in Data Base -->*/}
 
             {/*<!-- Subcategories in DB -->*/}
-            <SubcategoriesInDb />
+            {/* <SubcategoriesInDb /> */}
 
             {/*<!-- List of products in DB -->*/}
             <Chart />
