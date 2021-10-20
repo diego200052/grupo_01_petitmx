@@ -63,9 +63,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link"  to="/content">
+                    <Link className="nav-link"  to="/subcategories">
                         <i className="fas fa-list-alt"></i>
-                        <span>Categories</span>
+                        <span>Subcategorías</span>
                     </Link>
                 </li>
 

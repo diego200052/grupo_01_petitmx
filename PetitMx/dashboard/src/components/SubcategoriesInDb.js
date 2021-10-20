@@ -52,6 +52,7 @@ class SubcategoriesInDb extends Component {
     render() {
         if(this.state.productsCategories !== undefined) {
             return(
+                <div className="row d-sm-flex aligns-items-center justify-content-center mb-4 mt-4">
                 <div className="col-lg-11 mb-4">
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
@@ -68,9 +69,11 @@ class SubcategoriesInDb extends Component {
                         </div>
                     </div>
                 </div>
+                </div>
             )
         } else {
             return(
+                <div className="row d-sm-flex aligns-items-center justify-content-center mb-4 mt-4">
                 <div className="col-lg-6 mb-4">
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
@@ -82,6 +85,7 @@ class SubcategoriesInDb extends Component {
                             Ninguna
                         </div>
                     </div>
+                </div>
                 </div>
             )
         }
