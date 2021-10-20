@@ -55,9 +55,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link"  to="/content">
+                    <Link className="nav-link"  to="/productsList">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Content Products</span>
+                        <span>Lista de Productos</span>
                     </Link>
                 </li>
 
