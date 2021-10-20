@@ -89,8 +89,10 @@ const controller = {
         .findByPk(req.params.id, { include: ['brand', 'subcategorys', 'pets'] })
         .then(function(product) {
             if (product) {
-                product["image"] = "/img/productos/" + product.image;
-                res.send(product);
+                let productJSON = JSON.parse(JSON.stringify(product));
+                productJSON["detailURL"] = "/products/productDetail/" + productJSON.id_product;
+                productJSON["image"] = "/img/productos/" + productJSON.image;
+                res.send(productJSON);
             } else {
                 res.send({error:"El producto no existe."})
             }

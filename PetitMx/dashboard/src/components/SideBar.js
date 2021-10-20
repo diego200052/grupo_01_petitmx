@@ -40,7 +40,7 @@ function SideBar(){
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
                     <Link className="nav-link collapsed" to="/genres">
-                        <i class="fas fa-users"></i>
+                        <i className="fas fa-users"></i>
                         <span>Users </span>
                     </Link>
                 </li>
