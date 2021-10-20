@@ -7,6 +7,7 @@ const productsRoutes = require('./routes/products')
 const adminRoutes = require('./routes/admin')
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
+const cors = require('cors');
 
 const loginCookie = require('./middlewares/loginCookie');
 
@@ -36,6 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(loginCookie);
+app.use(cors());
 
 //Levantando el servidor en el puerto 3030
 app.listen(process.env.PORT || 3030 , () => console.log('Server running in 3030 port'));
