@@ -1,1 +1,1 @@
-web: node ./PetitMx/app.js
+web: npm start
