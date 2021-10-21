@@ -106,7 +106,7 @@ const controlador = {
 							last_name: req.body.last_name,
 							status: 1,
 							avatar: file.filename,
-							rol_id: 5,
+							rol_id: 1,
 							login_id: newLogin.id_login
 						})
 						.then(() => {
