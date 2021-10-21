@@ -74,7 +74,7 @@ function SearchProducts(){
 				</div>
 			</div>
             {
-				keyword <= ((productCount*10)-5) && keyword > 0 ?
+				keyword <= ((productCount*10)-5) && keyword > 0 && keyword % 5 === 0 ?
 				<>
                     <div className="row">
                         <div className="col-12">
