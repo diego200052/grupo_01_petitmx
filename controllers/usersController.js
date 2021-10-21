@@ -83,7 +83,7 @@ const controlador = {
 			if(login != undefined)
 			{
 				/* Error: imposible registrar usuario existente */
-				return res.render("users/register", { errors: [{msg:"El correo" +req.body.email+ "ya está registrado en el sistema, intente nuevamente."}], old: req.body } );
+				return res.render("users/register", { errors: [{msg:"El correo: " +req.body.email+ " ya está registrado en el sistema, intente nuevamente."}], old: req.body } );
 			}
 			else {
 				let errors = validationResult(req);
