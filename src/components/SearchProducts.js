@@ -91,7 +91,7 @@ function SearchProducts(){
                                         <div className="text-center">
                                             <img 
                                                 className="img-fluid" 
-                                                src={product.image}
+                                                src={`https://petitmx.herokuapp.com${product.image}`}
                                                 alt={product.productName} 
                                             />
                                         </div>
@@ -105,7 +105,7 @@ function SearchProducts(){
     		        </div>
                 </>
 				:
-				<div className="alert alert-danger text-center my-4 fs-2">No existe el producto</div>
+				<div className="alert alert-danger text-center my-4 fs-2">No existe el producto o no se ha realizado una búsqueda.</div>
 			}
 
 			
