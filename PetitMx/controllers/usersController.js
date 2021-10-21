@@ -71,43 +71,58 @@ const controlador = {
 		if(!file) {
 		  const error = new Error('Por favor, seleccione un archivo de imagen para su perfil.');
 		  error.httpStatusCode = 404;
-		  return next(error);
+		  return res.render("users/register", { errors: [{msg:"Por favor, seleccione un archivo de imagen para su perfil."}], old: req.body } );
 		}
 
-		let errors = validationResult(req);
-
-		/* Validación de errores en el formulario */
-		if(errors.isEmpty())
-		{
-			let passwordHash = bcrypt.hashSync(req.body.password, 10);	
-
-			// Por default el rol: ID 1 - Cliente
-			db.Login.create(
+		db.Login.findAll({
+			where: { email: req.body.email }
+		})
+		.then(( logins ) => {
+			let login = logins[0];
+			/* Verificación si el usuario ya existe en la base de datos (json) */
+			if(login != undefined)
 			{
-				email: req.body.email,
-				password: passwordHash,
-			})
-			.then(( newLogin ) => {
-				db.User.create(
+				/* Error: imposible registrar usuario existente */
+				return res.render("users/register", { errors: [{msg:"El correo: " +req.body.email+ " ya está registrado en el sistema, intente nuevamente."}], old: req.body } );
+			}
+			else {
+				let errors = validationResult(req);
+
+				/* Validación de errores en el formulario */
+				if(errors.isEmpty())
 				{
-					first_name: req.body.first_name,
-					last_name: req.body.last_name,
-					status: 1,
-					avatar: file.filename,
-					rol_id: 1,
-					login_id: newLogin.id_login
-				})
-				.then(() => {
-					
-					return res.redirect('login');
-				})
-				.catch(error => res.send(error));
-			})
-			.catch(error => res.send(error));
-		}
-		else {
-			return res.render('users/register', { errors: errors.array(), old: req.body });
-		}
+					let passwordHash = bcrypt.hashSync(req.body.password, 10);	
+
+					// Por default el rol: ID 1 - Cliente
+					db.Login.create(
+					{
+						email: req.body.email,
+						password: passwordHash,
+					})
+					.then(( newLogin ) => {
+						db.User.create(
+						{
+							first_name: req.body.first_name,
+							last_name: req.body.last_name,
+							status: 1,
+							avatar: file.filename,
+							rol_id: 5,
+							login_id: newLogin.id_login
+						})
+						.then(() => {
+							
+							return res.redirect('login');
+						})
+						.catch(error => res.send(error));
+					})
+					.catch(error => res.send(error));
+				}
+				else {
+					return res.render('users/register', { errors: errors.array(), old: req.body });
+				}
+			}
+		})
+		.catch(error => res.send(error));
 	},
     contact: (req, res) => {
         res.render('users/contact', {user: req.session.user});
